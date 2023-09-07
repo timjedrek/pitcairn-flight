@@ -1,6 +1,6 @@
 class MessagesController < ApplicationController
   before_action :set_message, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:create, :new, :confirmation, :location, :cfi]
+  before_action :authenticate_admin!, except: [:create, :new, :confirmation, :location, :cfi, :home2]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   # GET /messages or /messages.json
@@ -9,6 +9,10 @@ class MessagesController < ApplicationController
   end
 
   def confirmation
+  end
+
+  def home2
+    @message = Message.new
   end
 
   # GET /messages/1 or /messages/1.json
@@ -46,7 +50,7 @@ class MessagesController < ApplicationController
           #if !success
           #  @show_checkbox_recaptcha = true
           #end
-          render :new, status: :unprocessable_entity }
+          render :home2, status: :unprocessable_entity }
         format.json { render json: @message.errors, status: :unprocessable_entity }
       end
     end

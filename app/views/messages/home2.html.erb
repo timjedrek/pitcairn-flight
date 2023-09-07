@@ -57,12 +57,16 @@
 
 </div>
 </section>
-<section class="flex flex-col lg:flex-row" id="form-section">
+<section class="flex flex-col lg:flex-row justify-center" id="form-section">
   <div class="lg:w-1/2">
-    <%= image_tag "pitcairn-flight-inside-cessna.webp", alt: "Inside a Cessna airplane at Pitcairn Flight", class: ""%>
+    <div class="lg:p-10 p-5">
+      <%= image_tag "pitcairn-flight-inside-cessna.webp", alt: "Inside a Cessna airplane at Pitcairn Flight", class: "rounded-2xl"%>
+    </div>
   </div>
   <div class="lg:w-1/2 lg:px-20 px-5">
-    <%= render 'form', message: @message%>
+    <%= turbo_frame_tag 'form-section' do %>
+      <%= render 'form', message: @message%>
+    <% end %>
   </div>
 </section>
 <%= render "shared/visit_school"%>
@@ -71,5 +75,3 @@
 <p class="lg:text-4xl text-2xl font-bold text-center p-20">
 Website is under construction and coming soon.  Meanwhile, please feel free to call us or drop by and say hello.
 </p>
-
-

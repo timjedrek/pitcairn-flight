@@ -23,7 +23,7 @@
       <% if content_for?(:title) %>
         <%= yield(:title) %>
       <% else %>
-        SimpliFly Flight Training | Mesa, AZ & Spanish Fork, UT
+        Pitcairn Flight | Pilot Training By Reading and Philadelphia
       <% end %>
     </title>
 
@@ -42,8 +42,8 @@
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="title" content="<%= if content_for?(:title) then yield(:title) else 'SimpliFly - Become a Pilot Mesa, AZ & Spanish Fork, UT' end %>">
-    <meta name="description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Become a pilot at SimpliFly.  With multiple locations in Arizona and Utah, we offer flexible and accelerated programs to take you from zero to hero!' end %>">
+    <meta name="title" content="<%= if content_for?(:title) then yield(:title) else 'Pitcairn Flight - Pilot Training by Reading and Philadelphia' end %>">
+    <meta name="description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Become a pilot at Pitcairn Flight.  Offering programs to get your private all the way to CFI.' end %>">
     <meta name="keywords" content="<%= if content_for?(:meta_keywords) then yield(:meta_keywords) else 'flight school, flight school near me, pilot school, pilot training, aviation school, flight lessons near me, discovery flight near me, private pilot, instrument rating, commercial pilot, private pilot license cost, atpflightschool, right rudder marketing, tim jedrek' end %>">
     <meta name="robots" content="index, follow">
     <meta name="language" content="English">
@@ -53,16 +53,16 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="<%= request.original_url %>">
-    <meta property="og:title" content="<%= if content_for?(:title) then yield(:title) else 'SimpliFly - Become a Pilot Mesa, AZ & Spanish Fork, UT' end %>">
-    <meta property="og:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Become a pilot at SimpliFly.  With multiple locations in Arizona and Utah, we offer flexible and accelerated programs to take you from zero to hero!' end %>">
-    <meta property="og:image" content="<%= if content_for?(:og_image) then yield(:og_image) else image_url('/simplifly_padded.webp') end %>">
+    <meta property="og:title" content="<%= if content_for?(:title) then yield(:title) else 'Pitcairn Flight - Pilot Training by Reading and Philadelphia' end %>">
+    <meta property="og:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Become a pilot at Pitcairn Flight.  Offering programs to get your private all the way to CFI.' end %>">
+    <meta property="og:image" content="<%= if content_for?(:og_image) then yield(:og_image) else image_url('/pitcairn-flight-logo-vertical-800.webp') end %>">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="<%= request.original_url %>">
-    <meta property="twitter:title" content="<%= if content_for?(:title) then yield(:title) else "SimpliFly - Become a Pilot Mesa, AZ & Spanish Fork, UT" end %>">
-    <meta property="twitter:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Become a pilot at SimpliFly.  With multiple locations in Arizona and Utah, we offer flexible and accelerated programs to take you from zero to hero!' end %>">
-    <meta property="twitter:image" content="<%= if content_for?(:twitter_image) then yield(:twitter_image) else image_url('/simplifly_padded.webp') end %>">
+    <meta property="twitter:title" content="<%= if content_for?(:title) then yield(:title) else "Pitcairn Flight - Pilot Training by Reading and Philadelphia" end %>">
+    <meta property="twitter:description" content="<%= if content_for?(:meta_description) then yield(:meta_description) else 'Become a pilot at Pitcairn Flight.  Offering programs to get your private all the way to CFI.' end %>">
+    <meta property="twitter:image" content="<%= if content_for?(:twitter_image) then yield(:twitter_image) else image_url('/pitcairn-flight-logo-vertical-800.webp') end %>">
 
     <!--CSS-->
     <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
@@ -92,34 +92,6 @@
     </style>
   </head>
   
-  <%#  PREVIOUS GTAG
-  
-  <!-- Google Analytics // Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-75X25DPQQC"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-75X25DPQQC');
-  </script>
-
-<!-- Google Tag Manager - WORKHORSE -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-N2FPMTG');</script>
-<!-- End Google Tag Manager -->
-
-<!-- Google Tag Manager (noscript) WORKHORSE-->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2FPMTG"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-  
-  %>
-
-
   <body>
     <main class="">
     <% if admin_signed_in? %>
@@ -128,31 +100,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <% end %>
       <%= yield %>
     </main>
+    <!-- #### CALLRAIL SCRIPT
     <script type="text/javascript" src="//cdn.callrail.com/companies/400810513/51d2a7c293b47e7f67d2/12/swap.js"></script> 
+    -->
 
     <%# GOOGLE TAG ONLY SHOW DURING PRODUCTION ENVIRONMENT%>
     <% if Rails.env.production? %>
-      <!-- Google Tag Manager (noscript) WORKHORSE-->
-      <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2FPMTG"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-      <!-- End Google Tag Manager (noscript) -->
-
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-PDEKLRKQDD"></script>
       <script>
-        // Consolidated Google Analytics and Google Tag Manager Scripts
-        (function(w,d,s,l,i){
-          w[l]=w[l]||[];
-          w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});
-          var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';
-          j.async=true;
-          j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
-          f.parentNode.insertBefore(j,f);
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-          // Google Analytics Script
-          w.dataLayer = w.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-75X25DPQQC');
-        })(window,document,'script','dataLayer','GTM-N2FPMTG');
+        gtag('config', 'G-PDEKLRKQDD');
       </script>
     <%end%>
   </body>

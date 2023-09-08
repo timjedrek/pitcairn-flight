@@ -80,10 +80,10 @@ Rails.application.configure do
   config.action_mailer.smtp_settings = {
     address: "mail.smtp2go.com",
     port: 80,
-    domain: "simplifly-co.com",
+    domain: "pitcairnmailer.com",
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: "simplifly-co.com",
+    user_name: "no-reply@pitcairnmailer.com",
     password: ENV["SMTP2GO_PASS"]
   }
 end

@@ -1,13 +1,17 @@
-<nav class="flex flex-row-reverse justify-center lg:justify-between items-center bg-gradient-to-r from-sky-400 to-sky-500 font-semibold text-slate-50 py-2 px-6">
+<nav class="flex flex-row-reverse justify-center lg:justify-between items-center bg-gradient-to-r from-slate-900 to-black font-semibold text-slate-50 py-2 px-6">
   <div class="flex-row gap-8 hidden lg:flex" >
-    <%= link_to "ENROLL TODAY", enroll_path, target: "blank", data: { turbo: false }, class: "hover:scale-105 border-4 border-white px-2 py-1 transition duration-300"%>
-    <%= link_to "DISCOVERY FLIGHT", discovery_flight_path, target: "blank", data: { turbo: false }, class: "hover:scale-105 border-4 border-white px-2 py-1 transition duration-300"%>
+    <%= link_to "CONTACT US", root_path, target: "blank", data: { turbo: false }, class: "hover:scale-105 border rounded-xl border-white px-2 py-1 transition duration-300 font-light"%>
     
   </div>
-  <div class="text-2xl">
-    <%= link_to "(480) 256-8355", "tel:1-480-256-8355" %>
+  <div class="">
+    <%= link_to root_path, data: { turbo: false } do %>
+      <%= image_tag "pitcairn-logo-400-white.webp", alt: "Pitcairn Flight Academy LLC logo", class: "w-64"%>
+    <% end %>
+  </div>
+  <div class="text-xl font-light">
+    <%= link_to "(610) 495-7000", "tel:1-610-495-7000" %>
   </div>
   <div class="text-neutral-900 text-xs absolute z-0 overflow-hidden -left-[100rem]">
-    <%= link_to "SimpliFly Website Designed and Developed by Right Rudder Marketing", "https://rightruddermarketing.com"%>
+    <%= link_to "Pitcairn Flight Academy Website Designed and Developed by Right Rudder Marketing", "https://rightruddermarketing.com"%>
   </div>
 </nav>

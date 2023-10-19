@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
   #root "pages#home"
-  root "messages#home2"
+  root "pages#home"
 
   #post 'uploader/image', to: 'uploader#image' #add upload image to posts 
   #get 'blog', to: 'posts#index', as: :blog

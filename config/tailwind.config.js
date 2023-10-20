@@ -37,6 +37,8 @@ module.exports = {
         'custom-700': '#135b88',
         'custom-800': '#0f4b6f',
         'custom-900': '#08293d',
+
+        'sky-950' : '#082f49',
       },
       keyframes: {
         'plane-enter': {
@@ -123,7 +125,7 @@ module.exports = {
         'slide-out-left5': 'slide-out-left 0.7s ease-out',
       },
       backgroundImage : {
-        'home' : "url('pitcairn-flight-bg-cessna.webp')",
+        'home' : "url('pitcairn-2-planes.webp')",
         'ctahead' : "url('cessna-sunset.webp')",
         'sunset' : "url('sunset.webp')",
         'pilots-airliner' : "url('pilots-in-airliner.webp')",

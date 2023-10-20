@@ -18,7 +18,7 @@
   }
 
   .btn-primary {
-    @apply font-sans font-semibold bg-sky-900 border-sky-900 hover:bg-sky-800 hover:border-sky-800 border-2 hover:scale-105 text-xl lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5 cursor-pointer;
+    @apply font-header font-semibold bg-sky-900 border-sky-900 hover:bg-sky-800 hover:border-sky-800 border-2 hover:scale-105 text-xl lg:text-2xl transition-all duration-300 text-white rounded-lg text-center py-2 px-5 cursor-pointer;
   }
   .btn-secondary {
     @apply font-sans font-semibold bg-white border-sky-500 border-2 hover:scale-105 text-xl lg:text-2xl transition-all duration-300 text-sky-500 rounded-lg text-center py-2 px-5 cursor-pointer;

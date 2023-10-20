@@ -2,15 +2,56 @@
 
 <header class="flex flex-col justify-center w-full bg-home h-screen-2/3 lg:h-screen-4/5 bg-bottom bg-cover px-10 ">
   <div class="flex flex-col items-center justify-center">
-    <h1 class="lg:text-6xl text-4xl font-semibold text-center text-white">PILOT TRAINING IN POTTSTOWN HERITAGE FIELD</h1>
-    <h2 class="lg:text-3xl text-xl italic font-semibold py-5 text-center text-white lg:block hidden">Flight School Pilot Training between Northwest Philadelphia and Reading</h2>
+    <h1 class="lg:text-6xl text-3xl font-semibold text-center text-white">PILOT TRAINING IN POTTSTOWN HERITAGE FIELD</h1>
+    <h2 class="lg:text-3xl text-xl font-header italic font-semibold py-5 text-center text-white lg:block hidden">Flight School Pilot Training between Northwest Philadelphia and Reading</h2>
     <h2 class="text-lg italic font-semibold py-5 text-center text-white lg:hidden">Flight school in the NW Philly & Reading Area</h2>
-    <div class="btn-primary">START FLYING TODAY</div>
+    <div class="btn-primary text-sm lg:text-xl">START FLYING TODAY</div>
   </div>
 </header>
 
-<section class="bg-gradient-to-r from-slate-800 to-sky-950">
-sdsd
+<section class="relative flex flex-col items-center bg-gradient-to-l from-slate-900 to-sky-800 lg:py-20">
+  <div class="text-center max-w-xl font-header text-white z-20">
+    <h2 class="text-3xl lg:text-5xl uppercase">Welcome to Pitcairn Flight Academy</h2>
+    <div class="px-5 mb-10 mt-3">Select an option below to discover why <br class="hidden lg:block"> people choose Pitcairn Flight Academy</div>
+  </div>
+
+  <div class="relative flex flex-col lg:flex-row items-center justify-center gap-12 text-slate-200 z-20">
+    <%= link_to root_path do%>
+      <div class="flex flex-col items-center">
+        <div class="w-72 h-72 overflow-hidden">
+          <%= image_tag "pitcairn-philly-airport-from-sky.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "Philadelphia Airport from above.  Photo by formulanone Flickr"%>
+        </div>
+        <div class="font-header uppercase mt-5 text-2xl">
+          How to start flying
+        </div>
+      </div>
+    <%end%>
+    <%= link_to root_path do%>
+      <div class="flex flex-col items-center">
+        <div class="w-72 h-72 overflow-hidden">
+          <%= image_tag "pitcairn-flight-cfi-fly-with-student.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "CFI at Pitcairn Flight Academy with Student"%>
+        </div>
+        <div class="font-header uppercase mt-5 text-2xl">
+          Pilot Training
+        </div>
+      </div>
+    <%end%>
+    <%= link_to root_path do%>
+      <div class="flex flex-col items-center">
+        <div class="w-72 h-72 overflow-hidden">
+          <%= image_tag "pitcairn-flight-two-cessnas-on-the-ramp.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "Cessna airplanes on the ramp at Pitcairn Flight Academy available for rent"%>
+        </div>
+        <div class="font-header uppercase mt-5 text-2xl">
+          Aircraft Rentals
+        </div>
+      </div>
+    <%end%>
+  </div>
+
+  <!--bg image-->
+  <div class="absolute z-0">
+    <%= image_tag "pitcairn-logo-wing.svg", alt: "logo backdrop", class: "h-[60vh] z-0 opacity-25"%> 
+  </div>
 </section>
 
 <section class="bg-red-900 text-white">

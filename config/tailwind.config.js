@@ -125,6 +125,7 @@ module.exports = {
         'slide-out-left5': 'slide-out-left 0.7s ease-out',
       },
       backgroundImage : {
+        'homeland' : "url('pitcairn-flight-bg-cessna.webp')",
         'home' : "url('pitcairn-2-planes.webp')",
         'ctahead' : "url('cessna-sunset.webp')",
         'sunset' : "url('sunset.webp')",

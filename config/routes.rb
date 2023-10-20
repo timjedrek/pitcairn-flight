@@ -13,7 +13,7 @@ Rails.application.routes.draw do
 
   devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
   #root "pages#home"
-  root "pages#home"
+  root "messages#home2"
 
   #post 'uploader/image', to: 'uploader#image' #add upload image to posts 
   #get 'blog', to: 'posts#index', as: :blog
@@ -52,6 +52,7 @@ Rails.application.routes.draw do
   #get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
+  get 'testing', to: 'pages#home'
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated

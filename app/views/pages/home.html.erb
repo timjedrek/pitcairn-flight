@@ -11,7 +11,7 @@
   </div>
 </header>
 
-<section class="relative flex flex-col items-center bg-gradient-to-l from-slate-900 to-sky-800 lg:py-20 py-10">
+<section class="relative flex flex-col items-center bg-gradient-to-l from-slate-900 to-sky-700 lg:py-20 py-10">
   <div class="text-center max-w-xl font-header text-white z-20">
     <h2 class="text-3xl lg:text-5xl uppercase">Welcome to Pitcairn Flight Academy</h2>
     <div class="px-5 mb-10 mt-3 text-slate-200">Select an option below to discover why <br class="hidden lg:block"> people choose Pitcairn Flight Academy</div>
@@ -54,6 +54,21 @@
   <div class="absolute hidden lg:block z-0">
     <%= image_tag "pitcairn-logo-wing.svg", alt: "logo backdrop", class: "h-[60vh] z-0 opacity-30"%> 
   </div>
+</section>
+
+<section class="bg-gradient-to-b from-white to-slate-300 flex flex-col items-center py-10">
+  <h2 class="font-header uppercase text-xl">PITCAIRN FLIGHT ACADEMY LLC</h2>
+  <h3 class="font-bold uppercase text-4xl pt-5 pb-10">NW Philly's premier pilot training academy</h3>
+  <p class="slate-700 max-w-2xl pb-5 text-center">
+    In a world with a great demand for skilled and resilient professional pilots, look no further than Pitcairn Flight Academy. Our unwavering commitment is to train student pilots to be successful in the industry.
+  </p>
+  <p class="slate-700 max-w-2xl pb-5 text-center">
+    With our educational methods, access to great reliable aircraft, and a focus on experience driven instruction, aspiring pilots can rest assured that they've chosen the best flight school. Choose Pitcairn Flight Academy and let's fly together.
+  </p>
+  <%= link_to root_path do%>
+    <div class="text-sm lg:text-2xl bg-transparent text-black border-2 rounded-xl px-2 py-2 border-sky-900 hover:scale-105 duration-300">START FLYING TODAY</div>
+  <%end%>
+
 </section>
 
 <section class="bg-slate-900 text-white">
@@ -152,7 +167,7 @@
   </div>
 </section>
 
-<section class="relative flex flex-col items-center bg-gradient-to-l from-slate-900 to-sky-800  lg:py-16 py-10">
+<section class="relative flex flex-col items-center bg-gradient-to-l from-slate-900 to-sky-700  lg:py-16 py-10" id="form-section">
   
     <%= turbo_frame_tag 'form-section' , class: "z-20 w-full max-w-2xl bg-white p-5 rounded-xl" do %>
       <%= render 'messages/form', message: @message%>
@@ -165,8 +180,3 @@
   
 </section>
 <%= render "shared/visit_school"%>
-
-
-<p class="lg:text-4xl text-2xl font-bold text-center p-20">
-Website is under construction and coming soon.  Meanwhile, please feel free to call us or drop by and say hello.
-</p>

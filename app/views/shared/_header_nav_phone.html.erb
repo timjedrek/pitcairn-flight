@@ -1,14 +1,16 @@
-<nav class="flex flex-row-reverse justify-center lg:justify-between items-center bg-gradient-to-r from-slate-900 to-black font-semibold text-slate-50 py-2 px-6">
+<nav class="flex flex-col-reverse lg:flex-row-reverse justify-center lg:justify-between items-center bg-gradient-to-r from-slate-900 to-black font-semibold text-slate-50 py-2 px-6 h-52 lg:h-16">
   <div class="flex-row gap-8 hidden lg:flex" >
     <%= link_to "CONTACT US", root_path, target: "blank", data: { turbo: false }, class: "hover:scale-105 border rounded-xl border-white px-2 py-1 transition duration-300 font-light"%>
     
   </div>
-  <div class="">
+  <div class="pb-5 lg:pb-0">
     <%= link_to root_path, data: { turbo: false } do %>
-      <%= image_tag "pitcairn-logo-400-white.webp", alt: "Pitcairn Flight Academy LLC logo", class: "w-64"%>
+      <%= image_tag "pitcairn-logo-400-white.webp", alt: "Pitcairn Flight Academy LLC logo", class: "w-64 pt-5 lg:pt-0 lg:block hidden"%>
+      <%= image_tag "pitcairn-logo-250-vertical-white.svg", alt: "Pitcairn Flight Academy LLC logo", class: "w-64 pt-5 lg:pt-0 lg:hidden"%>
+      
     <% end %>
   </div>
-  <div class="text-xl font-light">
+  <div class="lg:mt-0 mt-5 text-3xl lg:text-xl font-light">
     <%= link_to "(610) 495-7000", "tel:1-610-495-7000" %>
   </div>
   <div class="text-neutral-900 text-xs absolute z-0 overflow-hidden -left-[100rem]">

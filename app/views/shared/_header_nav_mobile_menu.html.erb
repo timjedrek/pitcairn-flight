@@ -1,21 +1,4 @@
-<!--Hamburger Button-->
-<button x-on:click="open = !open"
-        class="flex items-center space-x-2 focus:outline-none">
 
-  <span x-text="open ? 'Close' : '&nbsp;'"
-        class="text-lg font-semibold ">&nbsp;</span>
-  
-  <div class="w-6 flex items-center justify-center relative text-white">
-    <span x-bind:class="open ? 'translate-y-0 rotate-45' : '-translate-y-2'"
-          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></span>
-    
-    <span x-bind:class="open ? 'opacity-0 translate-x-3' : 'opacity-100'"
-          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></span>
-    
-    <span x-bind:class="open ? 'translate-y-0 -rotate-45' : 'translate-y-2'"
-          class="transform transition duration-500 w-full h-[3px] bg-current absolute"></span>
-  </div>
-</button>
 
 <menu x-show="open"
       x-cloak
@@ -25,9 +8,15 @@
       x-transition:leave="transition ease-in duration-300 transform"
       x-transition:leave-start="translate-x-0 opacity-100"
       x-transition:leave-end="-translate-x-full opacity-0"
-      class="absolute h-screen-mobile font-header text-xl overflow-y-auto w-screen left-0 top-16 bg-gradient-to-b from-sky-600/90 to-sky-100 pt-10 flex flex-col z-30"
+      class="fixed h-screen-mobile font-header text-xl overflow-y-auto w-screen top-0 left-0 bg-gradient-to-r from-slate-900 to-black flex flex-col z-30"
 >
-  <div class="ml-16 mr-5 mt-5" x-data="{
+  <div class="w-full flex flex-row justify-end">
+    <div class="px-5 py-3 border rounded-full mr-5 mt-3 cursor-pointer grid place-items-right"
+      x-on:click="open = !open">
+      X
+    </div>
+  </div>
+  <div class="ml-16 mr-5" x-data="{
           mobile_resources_drop: false,
           mobile_now_drop: false,
           mobile_certification_drop: false,

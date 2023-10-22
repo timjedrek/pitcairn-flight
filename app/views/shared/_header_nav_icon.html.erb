@@ -17,8 +17,8 @@ x-data="{ atTop: false }"
     >
     <!--LINKS-->
 
-    <!--HOW TO-->
-    <div class="" x-on:mouseover="fly_drop = true">
+    <!--MENU ITEM 1-->
+    <div class="" x-on:mouseover="fly_drop = true" x-on:mouseleave="fly_drop = false">
       <%= link_to "DISCOVERY FLIGHT", root_path, data: { turbo: false }, class: "hover:text-white link-underline" %>
       <div class="dropshadow-xl bg-slate-900/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-[0.61rem] right-[38.7rem]" x-cloak x-show="fly_drop"
         x-transition:enter="transition ease-out duration-300"
@@ -84,8 +84,8 @@ x-data="{ atTop: false }"
         </div>
       </div>
     </div>
-    <!--AIRLINE PILOT COURSES-->
-    <div class="" x-on:mouseover="pilot_drop = true">
+    <!--MENU ITEM 2-->
+    <div class="" x-on:mouseover="pilot_drop = true" x-on:mouseleave="pilot_drop = false">
       <%= link_to "BECOME A PILOT" , root_path, data: { turbo: false }, class: "hover:text-white link-underline"%>
       <div class="dropshadow-xl bg-slate-900/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-[0.61rem] right-[21.7rem]" x-cloak x-show="pilot_drop"
         x-transition:enter="transition ease-out duration-300"
@@ -153,8 +153,8 @@ x-data="{ atTop: false }"
       </div>
     </div>
     
-    <!--FINANCING-->
-    <div class="" x-on:mouseover="financing_drop = true">
+    <!--MENU ITEM 3-->
+    <div class="" x-on:mouseover="financing_drop = true" x-on:mouseleave="financing_drop = false">
       <%= link_to "ABOUT US", root_path, data: { turbo: false }, class: "hover:text-white link-underline" %>
       <div class="dropshadow-xl bg-slate-900/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-[0.61rem] right-[19.7rem]" x-cloak x-show="financing_drop"
         x-transition:enter="transition ease-out duration-300"
@@ -208,6 +208,8 @@ x-data="{ atTop: false }"
       </div>
     </div>
   </div>
+
+  <!--MOBILE PHONE STUFF (PICS AND ANIMATION) hidden on desktop-->
 
   <div class="lg:hidden mr-5 w-full -translate-x-[60rem] overflow-hidden
       absolute top-0 left-0 right-0 font-lg p-2 transition duration-500 ease-in-out"

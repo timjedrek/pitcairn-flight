@@ -56,17 +56,17 @@
   </div>
 </section>
 
-<section class="bg-gradient-to-b from-white to-slate-300 flex flex-col items-center py-10">
+<section class="bg-gradient-to-b from-white to-slate-300 flex flex-col items-center py-10 px-10 text-center">
   <h2 class="font-header uppercase text-xl">PITCAIRN FLIGHT ACADEMY LLC</h2>
   <h3 class="font-bold uppercase text-4xl pt-5 pb-10">NW Philly's premier pilot training academy</h3>
-  <p class="slate-700 max-w-2xl pb-5 text-center">
-    In a world with a great demand for skilled and resilient professional pilots, look no further than Pitcairn Flight Academy. Our unwavering commitment is to train student pilots to be successful in the industry.
+  <p class="slate-700 max-w-2xl pb-5">
+    In a world with a great demand for skilled and resilient professional pilots, look no further than Pitcairn Flight Academy. Our unwavering commitment is to train student pilots to be successful in their careers.
   </p>
-  <p class="slate-700 max-w-2xl pb-5 text-center">
+  <p class="slate-700 max-w-2xl pb-5">
     With our educational methods, access to great reliable aircraft, and a focus on experience driven instruction, aspiring pilots can rest assured that they've chosen the best flight school. Choose Pitcairn Flight Academy and let's fly together.
   </p>
   <%= link_to root_path do%>
-    <div class="text-sm lg:text-2xl bg-transparent text-black border-2 rounded-xl px-2 py-2 border-sky-900 hover:scale-105 duration-300">START FLYING TODAY</div>
+    <div class="text-sm lg:text-2xl bg-transparent text-black border-2 rounded-xl px-2 py-2 border-black hover:scale-105 duration-300">START FLYING TODAY</div>
   <%end%>
 
 </section>
@@ -84,7 +84,7 @@
           This is your chance to become a pilot and begin an extraordinary career in aviation. Whether you dream of flying in the skies as a commercial pilot or just fly for fun, our comprehensive training programs will equip you with the knowledge and skills needed to reach your aviation goals.
         </p>
         <p class="pb-5 text-slate-300">
-          There's nothing quite like the feeling of flying. Each flight is an adventure, a journey that offers awe inspiring views, challenging experiences, and a unique perspective on the world. Whether you're flying above the local farm land in the Pottstown area or flying above the skyline of Philadelphia, the joy of exploration and aviation is indescribable.
+          There's nothing quite like the feeling of flying. Each flight is an adventure, a journey that offers awe inspiring views, challenging experiences, and a unique perspective on the world. Whether you're flying above the local Pottstown area or flying above the skyline of Philadelphia, the joy of exploration and aviation is indescribable.
         </p>
         <p class="pb-5 text-slate-300">
           Do you think you have what it takes?  Take our aviation quiz. This interactive quiz will not only help you discover more about yourself and your aspirations but also provide valuable insights into your potential as a pilot. 
@@ -167,7 +167,7 @@
   </div>
 </section>
 
-<section class="relative flex flex-col items-center bg-gradient-to-l from-slate-900 to-sky-700  lg:py-16 py-10" id="form-section">
+<section class="relative flex flex-col items-center lg:bg-gradient-to-l bg-gradient-to-b from-slate-900 to-sky-700 px-5 lg:px-0  lg:py-16 py-10" id="form-section">
   
     <%= turbo_frame_tag 'form-section' , class: "z-20 w-full max-w-2xl bg-white p-5 rounded-xl" do %>
       <%= render 'messages/form', message: @message%>

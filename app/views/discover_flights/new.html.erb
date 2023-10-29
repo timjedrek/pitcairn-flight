@@ -3,10 +3,10 @@
 <%# meta_description("Experience the thrill of aviation with a discovery flight at Simplifly in Mesa, Phoenix, Scottsdale, and Spanish Fork, Salt Lake. Take the controls and get a taste of what it's like to be a pilot.") %>
 <%# meta_keywords("Discovery Flight, Introductory Flight, Flight Experience, Mesa Flight School, Phoenix Flight School, Scottsdale Flight School, Spanish Fork Flight School, Salt Lake Flight School") %>
 
-<header class="w-full bg-home bg-aerial h-screen lg:h-screen bg-cover bg-center flex justify-center items-center" id="top">
-  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-start w-full">
-      <h1 class="font-semibold text-6xl text-center lg:text-start font-header uppercase">Book a Discovery Flight</h1>
-      <h2 class="font-bold text-4xl text-center lg:text-start py-10">Fly at SimpliFly and See if Flying is for You</h2>
+<header class="w-full bg-pilot-in-cessna bg-aerial h-screen lg:h-screen bg-cover bg-center flex justify-center items-center" id="top">
+  <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-center lg:items-start w-full">
+      <h1 class="font-bold text-6xl text-center lg:text-start uppercase">Let's Go Flying</h1>
+      <h2 class="font-bold text-3xl text-center lg:text-start py-10 font-header italic">Do an intro discovery flight at Pitcairn Flight Academy</h2>
       <div class="w-full flex flex-col items-center lg:hidden">
         <a href="#quiz-frame", class="btn-primary"
           onclick="event.preventDefault(); document.getElementById('quiz-frame').scrollIntoView({ behavior: 'smooth' });">
@@ -17,29 +17,29 @@
 </header>
 
 <turbo-frame id="quiz-frame">
-  <div class=" lg:absolute right-5 top-10 z-50 bg-white lg:rounded-xl lg:w-1/4 border pb-5 lg:overflow-y-auto lg:h-[92vh]">
+  <div class=" lg:absolute right-5 top-10 z-50 bg-white lg:rounded-xl lg:border border-sky-700 pb-5 lg:overflow-y-auto lg:h-[92vh]">
     <%= render "form", discover_flight: @discover_flight %>
     
   </div>
 </turbo-frame>
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center bg-gradient-to-b from-white to-custom-50">
   <div class="lg:w-1/2 lg:px-10">
     <h3 class="font-semibold text-4xl py-10 text-center uppercase font-header">What to Expect</h3>
     <p class="p-text px-5 pb-5">
-      Your Discovery Flight is designed to give you a taste of what it's like to be a pilot. You'll spend approximately 60 minutes in the air with one of our certified flight instructors, who will guide you through the basics of flying and answer any questions you may have. You'll also have the opportunity to take the controls and experience the thrill of flying first hand.
+      The Discovery Flight experience is specially crafted to provide you with a glimpse into the world of aviation. You will spend around 30-60 minutes airborne alongside one of our certified flight instructors, who will walk you through the fundamentals of flying and address any questions you might have. Additionally, you'll have the chance to take the controls and fly the airplane yourself.
     </p>
     <p class="p-text px-5 pb-5">
-      During your discovery flight, you'll sit in the pilot seat and the FAA Certified Flight Instructor at your side will allow you to fly for the majority of the flight. A discovery flight is a great option if you’re considering a career in aviation, a new hobby or it can make a unique gift for anyone at any age. You can even bring a friend to ride along. At the end of the flight, the instructor will be able to answer any questions that you may have.
+      During your Discovery Flight, you'll occupy the pilot's seat, while a FAA Certified Flight Instructor, seated beside you, will help you to pilot the aircraft. A Discovery Flight is a must do if you are contemplating a career in aviation, looking for a new pastime, or seeking a unforgettable gift. Following the flight, the instructor will be available to address any questions you may have during the post flight briefing.
     </p>
     <h3 class="font-semibold text-4xl py-10 text-center uppercase font-header">What Happens After the Flight?</h3>
     <p class="p-text px-5 pb-5">
-      So, you've completed your discovery flight and are ready to take the next step? SimpliFly is here to help you take flight towards your aviation dreams and attain your goals.  Let's dive into what happens after your first flight with us.  
+      So, you've completed your discovery flight and are ready to take the next step? Pitcairn Flight Academy is here to help you fly towards your aviation dreams and attain your goals.  Let's get into what happens after your first flight with us.  
     </p>
 
-    <div class="bg-white max-w-xl mx-5 lg:mx-auto border border-gray-200 rounded-2xl mb-10">
+    <div class="bg-white max-w-xl mx-5 md:mx-auto border border-sky-700 rounded-2xl mb-10">
       <ul class="shadow-box">					
-        <li class="relative border-b border-gray-200" x-data="{selected:null}">
+        <li class="relative border-b border-sky-700" x-data="{selected:null}">
           <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 1 ? selected = 1 : selected = null">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-lg">Work with our team to create a plan</span>
@@ -52,7 +52,7 @@
             </div>
           </div>
         </li>
-        <li class="relative border-b border-gray-200" x-data="{selected:null}">
+        <li class="relative border-b border-sky-700" x-data="{selected:null}">
           <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 2 ? selected = 2 : selected = null">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-lg">Take care of the prerequisites</span>
@@ -65,7 +65,7 @@
             </div>
           </div>
         </li>
-        <li class="relative border-b border-gray-200" x-data="{selected:null}">
+        <li class="relative border-b border-sky-700" x-data="{selected:null}">
           <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 3 ? selected = 3 : selected = null">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-lg">Start flight training and ground school</span>
@@ -74,11 +74,11 @@
           </button>
           <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''">
             <div class="p-6 p-text">
-              <p>Once you have completed your prerequisites, it's time to start building your flight hours and experience. You will work with your CFI to complete flight lessons and ground school, mastering the skills needed to become a proficient pilot.</p>
+              <p>Once you have completed your prerequisites, it's time to start building your flight hours and experience. You will work with your CFI to complete flight lessons and ground school, and learn the skills needed to become a proficient pilot.</p>
             </div>
           </div>
         </li>
-        <li class="relative border-b border-gray-200" x-data="{selected:null}">
+        <li class="relative border-b border-sky-700" x-data="{selected:null}">
           <button type="button" class="w-full px-8 py-6 text-left" @click="selected !== 4 ? selected = 4 : selected = null">
             <div class="flex items-center justify-between">
               <span class="font-semibold text-lg">Pass your checkride</span>
@@ -87,7 +87,7 @@
           </button>
           <div class="relative overflow-hidden transition-all max-h-0 duration-700" style="" x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''">
             <div class="p-6 p-text">
-              <p>As you near the end of your flight training, you will work with your CFI to prepare for your check ride. Our team will ensure that you are well-prepared and confident.  We'll have stage checks along the way so you can successfully pass your check ride and earn your pilot's license.</p>
+              <p>As you near the end of your flight training, you will work with your CFI to prepare for your check ride. Our team will ensure that you are well prepared and ready.  We'll have stage checks along the way so you can successfully pass your checkride and earn your pilot's license.</p>
             </div>
           </div>
         </li>
@@ -109,19 +109,19 @@
 
     <div class="pt-10 flex flex-row gap-3 justify-center">
       <%= link_to "" do %>
-        <div class="btn-secondary mb-10">
+        <div class="btn-primary mb-10">
           VIEW PROGRAMS
         </div>
       <% end %>
       <a href="#top", class="hidden lg:block"
         onclick="event.preventDefault(); document.getElementById('top').scrollIntoView({ behavior: 'smooth' });">
-        <div class="btn-primary mb-10 border-2 border-sky-500 hover:border-sky-600 lg:px-16">
+        <div class="btn-primary lg:px-16">
         FLY NOW
         </div>
       </a>
       <a href="#quiz-frame", class="lg:hidden"
         onclick="event.preventDefault(); document.getElementById('quiz-frame').scrollIntoView({ behavior: 'smooth' });">
-        <div class="btn-primary mb-10 border-2 border-sky-500 hover:border-sky-600 lg:px-16">
+        <div class="btn-primary lg:px-16">
         FLY NOW
         </div>
       </a>
@@ -129,10 +129,6 @@
   </div>
 </div>
 
-<div class="hidden lg:block px-2 bg-sky-200">
-  <%= render "shared/bottom_footer"%>
-</div>
-
-<div class="lg:hidden w-full bg-sky-200 pt-16 pb-5 pl-5">
+<div class="px-2 pt-5 bg-sky-900">
   <%= render "shared/bottom_footer"%>
 </div>

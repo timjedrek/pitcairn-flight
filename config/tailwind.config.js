@@ -127,6 +127,10 @@ module.exports = {
       backgroundImage : {
         'homeland' : "url('pitcairn-flight-bg-cessna.webp')",
         'home' : "url('pitcairn-2-planes.webp')",
+        'pilot-in-cessna' : "url('pitcairn-flight-bg-pilot-in-cessna.webp')",
+        
+
+
         'ctahead' : "url('cessna-sunset.webp')",
         'sunset' : "url('sunset.webp')",
         'pilots-airliner' : "url('pilots-in-airliner.webp')",

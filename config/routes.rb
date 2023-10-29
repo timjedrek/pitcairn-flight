@@ -52,7 +52,7 @@ Rails.application.routes.draw do
   #get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
-  get 'testing', to: 'pages#home'
+  get 'testing', to: 'pages#home', as: :root_path
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated

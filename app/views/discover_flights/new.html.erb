@@ -1,7 +1,7 @@
 <%# Head / Meta Data %>
-<% title("Discovery Flight | SimpliFly Flight School") %>
-<% meta_description("Experience the thrill of aviation with a discovery flight at Simplifly in Mesa, Phoenix, Scottsdale, and Spanish Fork, Salt Lake. Take the controls and get a taste of what it's like to be a pilot.") %>
-<% meta_keywords("Discovery Flight, Introductory Flight, Flight Experience, Mesa Flight School, Phoenix Flight School, Scottsdale Flight School, Spanish Fork Flight School, Salt Lake Flight School") %>
+<%# title("Discovery Flight | SimpliFly Flight School") %>
+<%# meta_description("Experience the thrill of aviation with a discovery flight at Simplifly in Mesa, Phoenix, Scottsdale, and Spanish Fork, Salt Lake. Take the controls and get a taste of what it's like to be a pilot.") %>
+<%# meta_keywords("Discovery Flight, Introductory Flight, Flight Experience, Mesa Flight School, Phoenix Flight School, Scottsdale Flight School, Spanish Fork Flight School, Salt Lake Flight School") %>
 
 <header class="w-full bg-home bg-aerial h-screen lg:h-screen bg-cover bg-center flex justify-center items-center" id="top">
   <div class="px-5 py-40 lg:py-52 flex flex-col justify-center items-start w-full">
@@ -18,9 +18,8 @@
 
 <turbo-frame id="quiz-frame">
   <div class=" lg:absolute right-5 top-10 z-50 bg-white lg:rounded-xl lg:w-1/4 border pb-5 lg:overflow-y-auto lg:h-[92vh]">
-    <%#= render "form", discover_flight: @discover_flight %>
-    <div class="calendly-inline-widget" data-url="https://calendly.com/simpliflyflightschool?hide_gdpr_banner=1" style="height:630px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    <%= render "form", discover_flight: @discover_flight %>
+    
   </div>
 </turbo-frame>
 
@@ -109,7 +108,7 @@
     </div>
 
     <div class="pt-10 flex flex-row gap-3 justify-center">
-      <%= link_to pilot_training_path do %>
+      <%= link_to "" do %>
         <div class="btn-secondary mb-10">
           VIEW PROGRAMS
         </div>

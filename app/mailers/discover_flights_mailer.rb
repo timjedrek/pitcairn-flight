@@ -1,11 +1,16 @@
 class DiscoverFlightsMailer < ApplicationMailer
 
-  default from: 'no-reply@idealaviationstlouis.com'
+  default from: 'no-reply@pitcairnmailer.com'
 
   def discover_flights_email(discover_flight)
     @discover_flight = discover_flight
 
-    mail(to: @discover_flight.email, bcc: ["info@idealaviationstlouis.com", "info@idealaviationstl.com"], subject: "✈️ Discovery Flight at Ideal Aviation")
+    if Rails.env.production?
+      mail(to: @discover_flight.email, bcc: ["info@pitcairnmailer.com", "flynow@pitcairnflight.com"], subject: "✈️ Discovery Flight at Pitcairn Flight Academy")
+    else
+      mail(to: @discover_flight.email, bcc: ["info@pitcairnmailer.com"], subject: "✈️ Discovery Flight at Pitcairn Flight Academy")
+    end
+
   end
 
 

@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   #get 'contact', to: 'messages#new', as: :contact
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
   #get 'visit-simplifly', to: 'messages#location', as: :location
-  #get 'instruct-at-simplifly', to: 'messages#cfi', as: :cfi
+  get 'instruct-at-simplifly', to: 'messages#cfi', as: :cfi
 
   # Book Download
   #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
@@ -63,9 +63,9 @@ Rails.application.routes.draw do
   #get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost
   #get 'timeline-to-be-a-pilot', to: 'pages#timeline', as: :timeline
   #get 'multi-engine-rating', to: 'pages#multi', as: :multi
-  #get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
-  #get 'instrument-rating', to: 'pages#instrument', as: :instrument
-  #get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
+  get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
+  get 'instrument-rating', to: 'pages#instrument', as: :instrument
+  get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
   #get 'airline-pilot-courses', to: 'pages#airline_pilot_courses', as: :airline_pilot_courses
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs

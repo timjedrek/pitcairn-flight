@@ -31,10 +31,10 @@ Rails.application.routes.draw do
   #get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
   # Contact form
-  get 'contact', to: 'messages#new', as: :contact
+  get 'contact-us', to: 'messages#location', as: :contact
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
-  #get 'visit-simplifly', to: 'messages#location', as: :location
-  get 'instruct-at-simplifly', to: 'messages#cfi', as: :cfi
+  #get 'visit-pitcairn', to: 'messages#location', as: :location
+  get 'become-a-cfi', to: 'messages#cfi', as: :cfi
 
   # Book Download
   #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation

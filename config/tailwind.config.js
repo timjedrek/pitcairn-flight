@@ -129,6 +129,7 @@ module.exports = {
         'home' : "url('pitcairn-2-planes.webp')",
         'pilot-in-cessna' : "url('pitcairn-flight-bg-pilot-in-cessna.webp')",
         'df-cessna' : "url('pitcairn-flight-discovery-flight-bg.webp')",
+        'cessna-hangar' : "url('pitcairn-flight-cessnas-on-the-ramp-in-front-of-hangar.webp')",
         
 
         'ctahead' : "url('cessna-sunset.webp')",

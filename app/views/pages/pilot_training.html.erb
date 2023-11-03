@@ -40,7 +40,7 @@
   </div>
 </header>
 
-<section class="bg-df-cessna bg-center bg-cover h-screen-2/3 lg:h-screen-4/5">
+<section class="bg-df-cessna bg-center bg-cover bg-fixed h-screen-2/3 lg:h-screen-4/5">
   <div class="flex flex-col items-center justify-center text-white text-center h-full mx-3">
     <h2 class="font-header uppercase text-4xl lg:text-5xl font-bold">Start with a <span class="text-teal-300">discovery flight</span></h2>
     <p class="text-xl py-10">Also known as an intro flight, this is the first flight you'll take where you're the pilot.  </p>
@@ -48,7 +48,36 @@
   </div>
 </section>
 
+<section class="bg-gradient-to-r from-white to-slate-300">
+  <div class="w-full flex flex-col lg:flex-row">
+
+    <div class="lg:w-1/2 flex flex-col items-center overflow-hidden">
+      <%= image_tag "pitcairn-flight-cessna-landing.webp", class: "w-full h-full object-cover hover:scale-110 duration-500", alt: "Cessna landing during a discovery flight.  Flickr Jason Woodhead"%>
+    </div>
+    <div class="lg:w-1/2 flex flex-col items-center justify-center px-3 lg:px-10 py-10" x-data="">
+      <h2 class="font-header uppercase text-2xl lg:text-4xl font-bold text-center opacity-0 duration-[1500ms] scale-x-0"
+        x-intersect="$el.classList.add('opacity-100', 'scale-x-100', 'z-0')"
+      >
+        Why do we reccomend a <span class="text-teal-800">discovery flight?</span></h2>
+      <p class="py-10">
+        A discovery flight is a sneak peek into the world of aviation and get your feet a little wet, and we think it's a pretty good idea for anyone dreaming of flying. At Pitcairn Flight Academy, we're all about providing a hands on experience and making sure you're making the right call when it comes to your aviation journey.
+      </p>
+      <p class="pb-10">
+        During a discovery flight, you get to hop into the cockpit, take the controls, and feel what it's like to be the one flying the plane. It's a bit like a test drive for flying, without the pressure of committing to a full blown pilot's license. We reccomend it because there's usually two outcomes out of the introductory flight. One, either you don't like it and you can determine that becoming is not right for you.  Or two, you fall in love with it and you make the decision that becoming a pilot is right for you.  It's usually the latter.  So don't wait, get on the schedule today and let's go flying together.
+      </p>
+      <%= link_to "LET'S GO FLYING", discovery_flight_path,  target: "blank", data: { turbo: false }, class: "btn-primary" %>
+    </div>
+  </div>
+</section>
+
 <section class="bg-gradient-to-b from-sky-950 to-slate-900">
+  <div class="flex flex-col w-full items-center">
+    <h2 class="text-white text-3xl font-header pt-10 text-center mx-3">I liked the discovery flight and I want to be a pilot.  What's next?</h2>
+    <p class="max-w-2xl text-center text-gray-300 pt-5">
+      This really depends on your aviation goals.  Are you looking to make a career out of flying or do you want to fly for fun?  Many pilots stop at their private or instrument and fly around town leisurely, while other pilots who want to make a career out of flying move on to getting their commercial certificate and flight instructor certificates.  Contact us and talk to one of our team members to determine what's right for you.
+    </p>
+    <%= link_to "CONTACT US", contact_path,  target: "blank", data: { turbo: false }, class: "btn-primary mt-5" %>
+  </div>
   <!--Steps-->
   <div class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10">
     <!--Step 1-->
@@ -56,7 +85,7 @@
       <div class="p-10 "><%=image_tag "pitcairn-flight-inside-cessna-small.webp", alt: "Private Pilot Training at Pitcairn Flight Academy", class: "rounded-lg"%></div>
       <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 1. Private Pilot Certificate</h3>
       <p class="text-base w-3/4 p-text">
-        This is the first step for folks who dream of flying. This certification lets you fly a plane for fun, not for making money. Our skilled instructors are all about giving you the right training so you can ace the basics of flying. They'll make sure you can take off, land, and cruise the skies with confidence. Our team's got your back!
+        This is the first step for folks who dream of flying. This certification lets you fly a plane and take passengers. Our skilled instructors are all about giving you the right training so you can ace the basics of flying. They'll make sure you can take off, land, and cruise the skies with confidence. Our team's got your back!
       </p>
       <%= link_to "PRIVATE PILOT TRAINING", private_pilot_path, data: { turbo: false }, class: "btn-primary w-3/4 text-sm mt-5" %>
     </div>
@@ -71,7 +100,7 @@
     </div>
     <!--Step 3-->
     <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
-      <div class="p-10 "><%=image_tag "pitcairn-flight-cfi-ron-in-front-of-cessna.webp", alt: "Commercial Training at Pitcairn Flight Academy", class: "rounded-lg"%></div>
+      <div class="p-10 "><%=image_tag "pitcairn-flight-commercial-pilot-smiling.webp", alt: "Commercial Training at Pitcairn Flight Academy", class: "rounded-lg"%></div>
       <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 3. Commerical Pilot</h3>
       <p class="text-base w-3/4">
         Obtain a commercial certificate is where you get a start in your aviation career.  A commercial certificate lets you get paid for your flying skills. Our experienced instructors will teach you how to handle more complex planes, learn more advanced maneuvers, and handle emergencies. We'll make sure you're ready to tackle any challenges in your aviation career.

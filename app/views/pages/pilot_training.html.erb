@@ -35,12 +35,60 @@
       <%= link_to "ENROLL TODAY", root_path,  target: "blank", data: { turbo: false }, class: "btn-primary my-3" %>
     </div>
     <div class="flex flex-col items-center lg:w-1/2">
-      <%= image_tag "pitcairn-flight-cfi-in-front-of-plane.webp", alt: "Pilot giving the thumbs up by a cessna 172", class: "lg:w-4/5 rounded-xl"%>
+      <%= image_tag "pitcairn-flight-cfi-in-front-of-plane.webp", alt: "Pilot giving the thumbs up by a cessna 172", class: "lg:w-4/5 lg:rounded-xl"%>
     </div>
   </div>
 </header>
 
+<section class="bg-df-cessna bg-center bg-cover h-screen-2/3 lg:h-screen-4/5">
+  <div class="flex flex-col items-center justify-center text-white text-center h-full mx-3">
+    <h2 class="font-header uppercase text-4xl lg:text-5xl font-bold">Start with a <span class="text-teal-300">discovery flight</span></h2>
+    <p class="text-xl py-10">Also known as an intro flight, this is the first flight you'll take where you're the pilot.  </p>
+    <%= link_to "SCHEDULE TODAY", discovery_flight_path,  target: "blank", data: { turbo: false }, class: "btn-primary" %>
+  </div>
+</section>
 
+<section class="bg-gradient-to-b from-sky-950 to-slate-900">
+  <!--Steps-->
+  <div class="flex flex-col lg:flex-row pt-10 pb-0 lg:py-10">
+    <!--Step 1-->
+    <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
+      <div class="p-10 "><%=image_tag "pitcairn-flight-inside-cessna-small.webp", alt: "Private Pilot Training at Pitcairn Flight Academy", class: "rounded-lg"%></div>
+      <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 1. Private Pilot Certificate</h3>
+      <p class="text-base w-3/4 p-text">
+        This is the first step for folks who dream of flying. This certification lets you fly a plane for fun, not for making money. Our skilled instructors are all about giving you the right training so you can ace the basics of flying. They'll make sure you can take off, land, and cruise the skies with confidence. Our team's got your back!
+      </p>
+      <%= link_to "PRIVATE PILOT TRAINING", private_pilot_path, data: { turbo: false }, class: "btn-primary w-3/4 text-sm mt-5" %>
+    </div>
+    <!--Step 2-->
+    <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300  lg:h-full">
+      <div class="p-10"><%=image_tag "pitcairn-flight-flying-in-clouds.webp", alt: "Instrument Training at Pitcairn Flight Academy", class: "rounded-lg"%></div>
+      <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 2. Instrument Rating</h3>
+      <p class="text-base w-3/4 p-text">
+        An Instrument Rating is your ticket to mastering flying in bad weather and low visibility, using only your plane's instruments.  It's all about gaining the ability to rely solely on the instruments within your aircraft, enabling you to make safe and informed decisions. It opens up a bunch of new opportunities, making you a safer and more skilled pilot.
+      </p>
+      <%= link_to "INSTRUMENT RATING", instrument_path, data: { turbo: false }, class: "btn-primary w-3/4 text-sm mt-5 lg:mt-6" %>
+    </div>
+    <!--Step 3-->
+    <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300">
+      <div class="p-10 "><%=image_tag "pitcairn-flight-cfi-ron-in-front-of-cessna.webp", alt: "Commercial Training at Pitcairn Flight Academy", class: "rounded-lg"%></div>
+      <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 3. Commerical Pilot</h3>
+      <p class="text-base w-3/4">
+        Obtain a commercial certificate is where you get a start in your aviation career.  A commercial certificate lets you get paid for your flying skills. Our experienced instructors will teach you how to handle more complex planes, learn more advanced maneuvers, and handle emergencies. We'll make sure you're ready to tackle any challenges in your aviation career.
+      </p>
+      <%= link_to "COMMERCIAL CERTIFICATE", commercial_path, data: { turbo: false }, class: "btn-primary w-3/4 text-sm mt-5 lg:mt-6" %>
+    </div>
+    <!--Step 4-->
+    <div class="flex flex-col items-center lg:w-1/2 p-text text-gray-300 mb-10 lg:mb-0">
+      <div class="p-10"><%=image_tag "pitcairn-flight-cfis-in-front-of-plane.webp", alt: "Certified Flight Instructor (CFI) at Pitcairn Flight Academy", class: "rounded-lg"%></div>
+      <h3 class="text-xl font-semibold pb-4 font-sans mx-5 text-center uppercase font-header text-white">Step 4. Certified Flight Instructor</h3>
+      <p class="text-base w-3/4">
+        Teach new pilots, gain flight experience, and share your knowledge. When you become a Certified Flight Instructor (CFI) at Pitcairn Flight Academy, you're guaranteed an interview to teach here. Get your flight hours with us, and when you're ready, you can move on to work for the airlines.
+      </p>
+      <%= link_to "CERTIFIED FLIGHT INSTRUCTOR", cfi_path, data: { turbo: false }, class: "btn-primary w-3/4 text-sm mt-5 lg:mt-11" %>
+    </div>
+  </div>
+</section>  
 
 <%#= render "shared/flex_vs_accel"%>
 <%#= render "shared/pilot_programs"%>

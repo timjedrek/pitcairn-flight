@@ -128,8 +128,8 @@ module.exports = {
         'homeland' : "url('pitcairn-flight-bg-cessna.webp')",
         'home' : "url('pitcairn-2-planes.webp')",
         'pilot-in-cessna' : "url('pitcairn-flight-bg-pilot-in-cessna.webp')",
+        'df-cessna' : "url('pitcairn-flight-discovery-flight-bg.webp')",
         
-
 
         'ctahead' : "url('cessna-sunset.webp')",
         'sunset' : "url('sunset.webp')",

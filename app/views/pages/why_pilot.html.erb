@@ -98,7 +98,190 @@
 <%= image_tag "pitcairn-flight-airliner-cockpit.webp", alt: "Airliner Cockpit", class: "lg:hidden w-full" %>
 
 <%= render "shared/cta_discovery_flight"%>
+
+<section class="p-5 py-20">
+  <div class="flex justify-center items-start my-2">
+    <div class="w-full sm:w-10/12 md:w-1/2 my-1">
+      <h2 class="text-2xl font-semibold font-header mb-2">Frequently Asked Questions</h2>
+      <ul class="flex flex-col">
+        <li class="bg-white my-2 shadow-lg" x-data="accordion(1)">
+          <h2
+            @click="handleClick()"
+            class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+          >
+            <span>What are the requirements to start flying?</span>
+            <svg
+              :class="handleRotate()"
+              class="fill-current text-teal-700 h-6 w-6 transform transition-transform duration-500"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+            </svg>
+          </h2>
+          <div
+            x-ref="tab"
+            :style="handleToggle()"
+            class="border-l-2 border-teal-600 overflow-hidden max-h-0 duration-500 transition-all"
+          >
+            <p class="p-3 text-gray-900">
+              Be at least 16 years old (14 years old for operating a glider or balloon).
+              Be able to read, speak, write, and understand the English language.
+              You do not need an FAA medical certificate from an Aviation Medical Examiner (AME) for the first few lessons, but you will need get your medical certificate prior to soloing.
+
+            </p>
+          </div>
+        </li>
+        <li class="bg-white my-2 shadow-lg" x-data="accordion(2)">
+          <h2
+            @click="handleClick()"
+            class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+          >
+            <span>What is a Discovery Flight?</span>
+            <svg
+              :class="handleRotate()"
+              class="fill-current text-teal-700 h-6 w-6 transform transition-transform duration-500"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+            </svg>
+          </h2>
+          <div
+            class="border-l-2 border-teal-600 overflow-hidden max-h-0 duration-500 transition-all"
+            x-ref="tab"
+            :style="handleToggle()"
+          >
+            <p class="p-3 text-gray-900">
+              A short introductory flight for anyone interested in learning about flying or taking the first step toward earning their pilot's license.
+            </p>
+          </div>
+        </li>
+        <li class="bg-white my-2 shadow-lg" x-data="accordion(3)">
+          <h2
+            @click="handleClick()"
+            class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+          >
+            <span>What should I bring to training?</span>
+            <svg
+              :class="handleRotate()"
+              class="fill-current text-teal-700 h-6 w-6 transform transition-transform duration-500"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+            </svg>
+          </h2>
+          <div
+            class="border-l-2 border-teal-600 overflow-hidden max-h-0 duration-500 transition-all"
+            x-ref="tab"
+            :style="handleToggle()"
+          >
+            <p class="p-3 text-gray-900">
+              You've completed a Discovery Flight and are ready for your first lesson. A couple of basic things to have when starting flight training are: A headset and extra batteries (because you never know when your batteries can fail), a logbook, and a pen and paper for notes. Of course, you don't need to go out and buy a headset right away, we have rentals. Once you're more established with flying, you can build your flight bag as recommended and have the necessary tools you'll need for the rating you're working on.
+            </p>
+          </div>
+        </li>
+        <li class="bg-white my-2 shadow-lg" x-data="accordion(4)">
+          <h2
+            @click="handleClick()"
+            class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+          >
+            <span>What is a typical lesson like?</span>
+            <svg
+              :class="handleRotate()"
+              class="fill-current text-teal-700 h-6 w-6 transform transition-transform duration-500"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+            </svg>
+          </h2>
+          <div
+            class="border-l-2 border-teal-600 overflow-hidden max-h-0 duration-500 transition-all"
+            x-ref="tab"
+            :style="handleToggle()"
+          >
+            <p class="p-3 text-gray-900">
+              For the minimum time of 2 hours, if you and the instructor go flying, you will have a short ground lesson and flight lesson brief, then fly and debrief at the end. The beginning ground lesson will cover the expected plan. Then your instructor will make sure that you have all of your documents uploaded to Flight Schedule Pro as well as the condition and availability of the aircraft. You will both then head out to the airplane for your flight lesson. Once you come back, you’ll debrief on the ramp, before heading back in to go over what you’ll be doing on your next lesson. Depending on how far you are in the syllabus and weather,  you may have to receive ground instruction for an entire lesson.
+            </p>
+          </div>
+        </li>
+        <li class="bg-white my-2 shadow-lg" x-data="accordion(5)">
+          <h2
+            @click="handleClick()"
+            class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+          >
+            <span>What is ground school?</span>
+            <svg
+              :class="handleRotate()"
+              class="fill-current text-teal-700 h-6 w-6 transform transition-transform duration-500"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+            </svg>
+          </h2>
+          <div
+            class="border-l-2 border-teal-600 overflow-hidden max-h-0 duration-500 transition-all"
+            x-ref="tab"
+            :style="handleToggle()"
+          >
+            <p class="p-3 text-gray-900">
+              Classroom learning. You will study aviation related topics such as aerodynamics, airport rules, aircraft instruments, and weather. This is one on one with your instructor. However, if there are enough students a group class will be offered. 
+            </p>
+          </div>
+        </li>
+        <li class="bg-white my-2 shadow-lg" x-data="accordion(6)">
+          <h2
+            @click="handleClick()"
+            class="flex flex-row justify-between items-center font-semibold p-3 cursor-pointer"
+          >
+            <span>How many hours does it take to get my private pilot license?</span>
+            <svg
+              :class="handleRotate()"
+              class="fill-current text-teal-700 h-6 w-6 transform transition-transform duration-500"
+              viewBox="0 0 20 20"
+            >
+              <path d="M13.962,8.885l-3.736,3.739c-0.086,0.086-0.201,0.13-0.314,0.13S9.686,12.71,9.6,12.624l-3.562-3.56C5.863,8.892,5.863,8.611,6.036,8.438c0.175-0.173,0.454-0.173,0.626,0l3.25,3.247l3.426-3.424c0.173-0.172,0.451-0.172,0.624,0C14.137,8.434,14.137,8.712,13.962,8.885 M18.406,10c0,4.644-3.763,8.406-8.406,8.406S1.594,14.644,1.594,10S5.356,1.594,10,1.594S18.406,5.356,18.406,10 M17.521,10c0-4.148-3.373-7.521-7.521-7.521c-4.148,0-7.521,3.374-7.521,7.521c0,4.147,3.374,7.521,7.521,7.521C14.148,17.521,17.521,14.147,17.521,10"></path>
+            </svg>
+          </h2>
+          <div
+            class="border-l-2 border-teal-600 overflow-hidden max-h-0 duration-500 transition-all"
+            x-ref="tab"
+            :style="handleToggle()"
+          >
+            <p class="p-3 text-gray-900">
+              That matters on your availability and how often you can fly. The FAA minimum for the private license is 40 hours but the national average is just over 65 hours. 
+            </p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
 <%= render "shared/contact_turboframe"%>
 <%= render "shared/visit_school"%>
 <%= render "shared/footer"%>
 
+
+  
+  <script>
+    document.addEventListener('alpine:init', () => {
+      Alpine.store('accordion', {
+        tab: 0
+      });
+      
+      Alpine.data('accordion', (idx) => ({
+        init() {
+          this.idx = idx;
+        },
+        idx: -1,
+        handleClick() {
+          this.$store.accordion.tab = this.$store.accordion.tab === this.idx ? 0 : this.idx;
+        },
+        handleRotate() {
+          return this.$store.accordion.tab === this.idx ? 'rotate-180' : '';
+        },
+        handleToggle() {
+          return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
+        }
+      }));
+    })
+  </script>

@@ -37,10 +37,10 @@
           <%= link_to "YOUR FIRST FLIGHT" , discovery_flight_path, data: { turbo: false }, target: "blank"%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
-          <%= link_to "PILOT TRAINING PROCESS", pilot_training_path, target: "blank", data: { turbo: false }%>
+          <%= link_to "PILOT TRAINING PROCESS", pilot_training_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_resources_drop}">
-          <%= link_to "WHY BECOME A PILOT", root_path, target: "blank", data: { turbo: false }%>
+          <%= link_to "WHY BECOME A PILOT", why_pilot_path, data: { turbo: false }%>
         </li>        
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_resources_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_resources_drop}">
           <%= link_to "START PILOT CAREER", root_path, data: { turbo: false }%>
@@ -57,16 +57,16 @@
       </li>
         <!--Drop Down-->
         <li class="ml-5 animate-slide-in-left" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_now_drop}">
-          <%=link_to "PRIVATE PILOT CERTIFICATE", root_path, data: { turbo: false }%>
+          <%=link_to "PRIVATE PILOT CERTIFICATE", private_pilot_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left2" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left': !mobile_now_drop}">
-          <%=link_to "INSTRUMENT RATING", root_path, data: { turbo: false }%>
+          <%=link_to "INSTRUMENT RATING", instrument_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left3" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left2': !mobile_now_drop}">
-          <%=link_to "COMMERCIAL PILOT CERTIFICATE", root_path, data: { turbo: false }%>
+          <%=link_to "COMMERCIAL PILOT CERTIFICATE", commercial_path, data: { turbo: false }%>
         </li>
         <li class="ml-5 animate-slide-in-left4" x-show="mobile_now_drop" x-transition x-transition:leave.duration.300ms x-bind:class="{'animate-slide-out-left3': !mobile_now_drop}">
-          <%=link_to "CERTIFIED FLIGHT INSTRUCTOR", root_path, data: { turbo: false }%>
+          <%=link_to "CERTIFIED FLIGHT INSTRUCTOR", cfi_path, data: { turbo: false }%>
         </li>
       <li>
         <div class="flex flex-row justify-between" >

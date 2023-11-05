@@ -1,43 +1,104 @@
 <%= render "shared/header" %>
 
-<div class="relative isolate overflow-hidden bg-gray-900 py-24 sm:py-32">
-  <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&crop=focalpoint&fp-y=.8&w=2830&h=1500&q=80&blend=111827&sat=-100&exp=15&blend-mode=multiply" alt="" class="absolute inset-0 -z-10 h-full w-full object-cover object-right md:object-center">
+<div class="relative isolate overflow-hidden bg-gray-900 pt-24 sm:pt-32 lg:-mt-12 -mt-16">
+  
+  <%= image_tag "pitcairn-flight-pilot-back-bg.webp", alt: "back of pilot flying", class: "absolute inset-0 -z-10 h-full w-full object-cover object-center"%>
+  
   <div class="hidden sm:absolute sm:-top-10 sm:right-1/2 sm:-z-10 sm:mr-10 sm:block sm:transform-gpu sm:blur-3xl" aria-hidden="true">
-    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-teal-500 to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
   </div>
   <div class="absolute -top-52 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:top-[-28rem] sm:ml-16 sm:translate-x-0 sm:transform-gpu" aria-hidden="true">
-    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-[#ff4694] to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
+    <div class="aspect-[1097/845] w-[68.5625rem] bg-gradient-to-tr from-teal-500 to-[#776fff] opacity-20" style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"></div>
   </div>
   <div class="mx-auto max-w-7xl px-6 lg:px-8">
     <div class="mx-auto max-w-2xl lg:mx-0">
-      <h2 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Work with us</h2>
-      <p class="mt-6 text-lg leading-8 text-gray-300">Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.</p>
+      <h1 class="text-4xl font-bold tracking-tight text-white sm:text-6xl">Why Become a Pilot?</h1>
+      <p class="mt-6 text-lg leading-8 text-gray-200 font-header">A combination of factors such as mandatory retirement ages, COVID-induced early retirements, and the surging demand for pilots, indicates a pilot supply challenge in the aviation industry. Forecasts from experts suggest that, within the coming year or two, global demand for pilots will outstrip the available supply, and this trend is expected to persist over the next decade.</p>
     </div>
     <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
-      <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-        <a href="#">Open roles <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Internship program <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Our values <span aria-hidden="true">&rarr;</span></a>
-        <a href="#">Meet our leadership <span aria-hidden="true">&rarr;</span></a>
+      <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 font-header text-white sm:grid-cols-2 md:flex lg:gap-x-10">
+        <%= link_to "Discovery Flight #{content_tag(:span, "→".html_safe)}".html_safe, discovery_flight_path, class: "hover:text-teal-500 duration-300" %>
+        <%= link_to "Training Program #{content_tag(:span, "→".html_safe)}".html_safe, pilot_training_path, class: "hover:text-teal-500 duration-300" %>
+        <%= link_to "Enroll Today #{content_tag(:span, "→".html_safe)}".html_safe, root_path, class: "hover:text-teal-500 duration-300" %>
+        <%= link_to "Contact Us #{content_tag(:span, "→".html_safe)}".html_safe, contact_path, class: "hover:text-teal-500 duration-300" %>
+
       </div>
       <dl class="mt-16 grid grid-cols-1 gap-8 sm:mt-20 sm:grid-cols-2 lg:grid-cols-4">
         <div class="flex flex-col-reverse">
-          <dt class="text-base leading-7 text-gray-300">Offices worldwide</dt>
-          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">12</dd>
+          <dt class="text-base leading-7 text-gray-300 font-header">Pilots needed in the next 10 years</dt>
+          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">280,000</dd>
         </div>
         <div class="flex flex-col-reverse">
-          <dt class="text-base leading-7 text-gray-300">Full-time colleagues</dt>
-          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">300+</dd>
+          <dt class="text-base leading-7 text-gray-300 font-header">Pilots over 50 years old</dt>
+          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">38%</dd>
         </div>
         <div class="flex flex-col-reverse">
-          <dt class="text-base leading-7 text-gray-300">Hours per week</dt>
-          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">40</dd>
+          <dt class="text-base leading-7 text-gray-300 font-header">Pilots retiring in the next 10 years</dt>
+          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">45,000</dd>
         </div>
         <div class="flex flex-col-reverse">
-          <dt class="text-base leading-7 text-gray-300">Paid time off</dt>
-          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">Unlimited</dd>
+          <dt class="text-base leading-7 text-gray-300 font-header">Growth in pilot demand</dt>
+          <dd class="text-2xl font-bold leading-9 tracking-tight text-white">39%</dd>
         </div>
       </dl>
     </div>
   </div>
+  <div class="flex flex-row justify-end">
+    <div class="text-gray-500 mt-20 mb-10 mr-10 italic text-sm">
+      <a href="https://www.cae.com/media/documents/ATF/Aviation-Talent-Forecast-2023.pdf" target="blank">Source: 2023 CAE Aviation Talent Forcast</a>
+    </div>
+  </div>
 </div>
+
+
+
+<div class="overflow-hidden bg-white py-24 sm:py-32">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
+      <div class="lg:pr-8 lg:pt-4">
+        <div class="lg:max-w-lg">
+          <h2 class="text-base font-semibold leading-7 text-teal-500">The time is now</h2>
+          <p class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl font-header">Start training today</p>
+          <p class="mt-6 text-lg leading-8 text-gray-600">Contrary to popular belief, training to become a pilot is easier than ever.  All it takes commitment, dedication, and a strong passion to study and gain the necessary skills.</p>
+          <dl class="mt-10 max-w-xl space-y-8 text-base leading-7 text-gray-600 lg:max-w-none">
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-teal-500 h-5 absolute left-1 top-1">
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+                Fly for fun.
+              </dt>
+              <dd class="inline">Earning your wings let's you see the world in a new perspective.  It's fun and the views are breathtaking.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-teal-500 h-5 absolute left-1 top-1">
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+                Develop your skills.
+              </dt>
+              <dd class="inline">Training to a pilot means developing and strengthening your critical thinking skills and aeronautical decision making.</dd>
+            </div>
+            <div class="relative pl-9">
+              <dt class="inline font-semibold text-gray-900">
+                <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-teal-500 h-5 absolute left-1 top-1">
+                  <path d="M19 8.562c0 .434-1.155 1.463-2.978 1.463h-4a.089.089 0 0 1-.023.034l-4.221 5.567-.005.006-1.023 1.355a.35.35 0 0 1-.269.131H5.115a.331.331 0 0 1-.28-.154.356.356 0 0 1-.051-.183.291.291 0 0 1 .028-.137l1.029-2.235c.188-.366.36-.737.514-1.12l1.5-3.264H4.018a9.281 9.281 0 0 1-1.029-.1l-1.6 2.343a.163.163 0 0 1-.138.075H.171a.162.162 0 0 1-.131-.063.165.165 0 0 1-.04-.1v-.04l1.526-3.578L0 4.978a.162.162 0 0 1 .04-.143.161.161 0 0 1 .131-.062h1.08a.162.162 0 0 1 .138.074l1.6 2.353c.251-.029.851-.1 1.029-.1h3.835L6.287 3.681l-.36-.781L4.812.475a.3.3 0 0 1-.028-.138.359.359 0 0 1 .051-.183.331.331 0 0 1 .28-.154h1.366a.351.351 0 0 1 .269.132l.994 1.308L12 7.059a.1.1 0 0 1 .023.034h4c1.82 0 2.977 1.029 2.977 1.469"></path>
+                </svg>
+                Fly for a career.
+              </dt>
+              <dd class="inline">As pilot demand goes up, so does pilot salaries making becoming a pilot a lucrative career choice.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+      <%= image_tag "pitcairn-flight-airliner-cockpit.webp", alt: "Airliner Cockpit", class: "w-48rem sm:w-57rem hidden lg:block max-w-none rounded-xl shadow-xl ring-1 ring-gray-400/10  md:-ml-4 lg:-ml-0" %>
+    </div>
+  </div>
+</div>
+<%= image_tag "pitcairn-flight-airliner-cockpit.webp", alt: "Airliner Cockpit", class: "lg:hidden w-full" %>
+
+<%= render "shared/cta_discovery_flight"%>
+<%= render "shared/contact_turboframe"%>
+<%= render "shared/visit_school"%>
+<%= render "shared/footer"%>
+

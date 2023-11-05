@@ -53,6 +53,13 @@ Rails.application.routes.draw do
 
   # Static Pages
   get 'testing', to: 'pages#home'
+  get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
+  get 'why-become-a-pilot', to: 'pages#why_pilot', as: :why_pilot
+
+  get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
+  get 'instrument-rating', to: 'pages#instrument', as: :instrument
+  get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
+  
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
@@ -63,10 +70,7 @@ Rails.application.routes.draw do
   #get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost
   #get 'timeline-to-be-a-pilot', to: 'pages#timeline', as: :timeline
   #get 'multi-engine-rating', to: 'pages#multi', as: :multi
-  get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
-  get 'instrument-rating', to: 'pages#instrument', as: :instrument
-  get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
-  get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
+
   #get 'airline-pilot-courses', to: 'pages#airline_pilot_courses', as: :airline_pilot_courses
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
   #get 'our-team', to: 'pages#our_team', as: :our_team

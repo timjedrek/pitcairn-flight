@@ -7,46 +7,112 @@
 
 
 
-
-
-
-
-
-<section class="bg-gradient-to-t lg:bg-gradient-to-l from-sky-800 to-slate-900 text-white">
-  <div class="flex flex-col lg:flex-row-reverse lg:items-center pt-10 lg:py-10">
-    <!--Text Section-->
-    <div class="lg:w-1/2 flex flex-col justify-center items-center pb-10">
-      <p class="text-xl lg:text-3xl text-center">How to Become a Pilot at SimpliFly</p>
-      <h2 class="font-bold text-3xl lg:text-5xl pt-5 text-center">Private Pilot Certificate</h2>
-      <p class="w-5/6 lg:w-4/5 pt-5 text-left lg:text-left text-lg lg:text-base p-text">
-      The first step in your aviation journey is to get your private pilot certificate.  There are three main tests that you need to pass to get your pilot license: the medical exam, written test, and the flight test (checkride).
-      </p>
-      <p class="w-5/6 lg:w-4/5 pt-5 text-left lg:text-left text-lg lg:text-base p-text">
-      We believe that the key to your success lies in our commitment to providing the highest quality flight training available, with a focus on safety, professionalism, and personalized attention.
-      </p>
-    </div>
-    <div class="lg:w-1/2">
-      <div class="grid place-items-center lg:mx-10">
-        <%= image_tag "" , alt: "Two SimpliFly pilots smiling", class: "lg:rounded-2xl lg:w-5/6"%>
-        
+<!--Hero section-->
+<section class="bg-gray-800 text-gray-100 bg-cessna-start bg-cover bg-center">
+	<div class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-3xl">
+		<h1 class="text-4xl font-bold leadi sm:text-5xl">How to get your
+			<span class="text-sky-100">Private Pilot </span> Certificate
+		</h1>
+		<p class="px-8 mt-8 mb-12 text-lg">The first step in your aviation journey is to get your private pilot certificate. </p>
+		<div class="flex flex-wrap justify-center">
+			
+      <div class="flex flex-col lg:flex-row gap-5 mb-5">
+        <%= link_to "ENROLL TODAY", root_path, data: { turbo: false }, class: "px-8 py-3 m-2 text-lg font-semibold rounded bg-sky-100 text-gray-900 hover:scale-105 duration-300" %>
+        <%= link_to "CONTACT US", contact_path, data: { turbo: false }, class: "px-8 py-3 m-2 text-lg font-semibold rounded bg-sky-100 text-gray-900 hover:scale-105 duration-300 hidden lg:block" %>
       </div>
-    </div>
-  </div>
+      <!--<button class="px-8 py-3 m-2 text-lg font-semibold rounded bg-teal-900 text-gray-900">Start Today</button>
+			<button class="px-8 py-3 m-2 text-lg border rounded text-gray-50 border-gray-700">Contact Us</button>-->
+		</div>
+	</div>
+</section>
+
+<!--Feature section-->
+<section class="bg-gray-800 text-gray-100">
+	<div class="container flex flex-col mx-auto lg:flex-row lg:items-center">
+		<div class="flex flex-col px-6 py-8 space-y-6 rounded-sm sm:p-8 lg:p-12 lg:w-1/2 xl:w-2/5 bg-sky-100 text-gray-900">
+			<div class="flex space-x-2 sm:space-x-4">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
+				<div class="space-y-2">
+					<p class="text-lg font-medium leadi">Complete a discovery flight</p>
+					<p class="leadi">Your very first flight lesson.  </p>
+				</div>
+			</div>
+			<div class="flex space-x-2 sm:space-x-4">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
+				<div class="space-y-2">
+					<p class="text-lg font-medium leadi">Partner with an instructor</p>
+					<p class="leadi">Develop plan to complete certification.</p>
+				</div>
+			</div>
+			<div class="flex space-x-2 sm:space-x-4">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
+				<div class="space-y-2">
+					<p class="text-lg font-medium leadi">Learn how to fly</p>
+					<p class="leadi">Learn the aeronautical knowledge to fly a plane.</p>
+				</div>
+			</div>
+      <div class="flex space-x-2 sm:space-x-4">
+				<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="flex-shrink-0 w-6 h-6">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+				</svg>
+				<div class="space-y-2">
+					<p class="text-lg font-medium leadi">Complete flying exam</p>
+					<p class="leadi">Meet FAA Airman Certification Standards</p>
+				</div>
+			</div>
+		</div>
+		<div class="lg:w-1/2 xl:w-3/5 bg-gray-800">
+			<div class="flex items-center justify-center p-0 md:p-8 lg:p-12">
+				<!--<img src="https://source.unsplash.com/640x480/" alt="" class="rounded-lg shadow-lg bg-gray-500 aspect-video sm:min-h-96">-->
+        <%= image_tag "pitcairn-flight-entrance.webp", class: "lg:rounded-lg shadow-lg bg-gray-500 aspect-video sm:min-h-96"%>
+			</div>
+		</div>
+	</div>
 </section>
 
 
+<%= render "shared/cta_discovery_flight"%>
 
-<section class="bg-gradient-to-b from-slate-50 to-sky-200 flex flex-col items-center">
+<section class="bg-gray-800 text-gray-100">
+	<div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+		<div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+			
+      <%= image_tag "pitcairn-flight-cfi-fly-with-student.webp", alt: "CFI with student", class: "object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"%>
+      
+		</div>
+		<div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
+			<h1 class="text-3xl lg:text-5xl font-bold leadi sm:text-6xl">Partner with a 
+				<span class="text-sky-100">Certified Flight Instructor</span>
+			</h1>
+			<p class="mt-6 mb-8 text-lg sm:mb-12 font-header">Develop a plan together to learn how to fly.
+				<br class="hidden md:inline lg:hidden">Prepare for the medical, written, and practical exams.
+			</p>
+			<div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
+				<a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold rounded bg-sky-100 text-gray-900 hover:scale-105 duration-300">Enroll Today</a>
+				<a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold border rounded border-gray-100 hover:scale-105 duration-300">Contact Us</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<section class="bg-gradient-to-b from-slate-50 to-slate-200 flex flex-col items-center">
   <div class="max-w-4xl flex flex-col pt-10 px-5">
-    <h3 class="text-5xl font-header uppercase font-semibold">Get Your Private Pilot Certificate</h3>
-    <h4 class="text-3xl text-slate-600 italic py-5">Simplifly Offers Accelerated and Flexible Training Options</h4>
-    <p class="text-lg">The first step in becoming a pilot is to get your private pilot certificate.  With a private pilot certificate, you are given the privilege of flying an aircraft and being the pilot in command (PIC). Flight training includes aircraft maneuvers, navigation, emergency procedures and cross-country flight planning. While people may seek the license for hobby or sport reasons, a private pilot certification is the first major milestone on the road to becoming an airline pilot.</p>
+    <h3 class="lg:text-4xl text-2xl uppercase font-bold">Get Your Private Pilot Certificate</h3>
+    <h4 class="text-xl text-slate-600 italic py-5">Pitcairn Flight Academy Offers Training Options to Work With Your Schedule</h4>
+    <p class="text-lg font-header">Becoming a pilot starts with getting your private pilot certificate, granting you the ability to operate an aircraft as the pilot in charge. Training covers essential skills like flying maneuvers, navigation, handling emergencies, and planning cross-country flights. Many pursue this certification for leisure or sports, but it's the initial step towards a career as an airline pilot.</p>
     
-    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">How Long Will it Take?</h3>
-    <p class="text-lg">The amount of time required to earn a private pilot certificate varies and largely depends on weather, availability, finances, and how often a student is available to fly. In our accelerated program, a pilot certificate can be earned in approximately two months. If flying only a few times a week, expect to be ready for your checkride in a few months to a year.</p>
+    <h3 class="lg:text-4xl text-2xl uppercase font-bold pt-20 pb-5">How Long Will it Take?</h3>
+    <p class="text-lg font-header">The time needed to earn a private pilot certificate can vary significantly, influenced by factors like weather, schedule availability, financial resources, and the frequency of flying lessons. If you choose to fly daily and study full time, you can obtain your pilot certificate in about two months. For those flying only a few times weekly, it may take several months to a year before you're prepared for your checkride.</p>
 
-    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">What are the Eligibility Requirements?</h3>
-    <ul class="list-disc text-lg pl-10 lg:pl-16">
+    <h3 class="lg:text-4xl text-2xl uppercase font-bold pt-20 pb-5">Eligibility Requirements?</h3>
+    <ul class="list-disc text-lg pl-10 lg:pl-16 font-header">
       <li>Be 17 years of age</li>
       <li>Read, speak, write and understand the English language</li>
       <li>Hold a valid student pilot certificate</li>
@@ -54,65 +120,64 @@
       <li>Meet the aeronautical experience requirements for the aircraft rating sought</li>
       <li>Pass a practical test for the aircraft rating sought</li>
     </ul>
-    <p class="text-slate-600 italic pt-5">Reference 14 CFR §61.103 for the entire list of eligibility requirements.</p>
+    <p class="text-slate-600 italic pt-5 pb-10">Reference 14 CFR §61.103 for the entire list of eligibility requirements.</p>
 
-    <h3 class="text-5xl font-header uppercase font-semibold pt-20 pb-5">The SimpliFly Guarantee</h3>
-    <p class="text-lg pb-20">If you have completed your private, <%= link_to "instrument", instrument_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, <%= link_to "commercial", commercial_path, class: "text-sky-600 hover:underline", data: {turbo: false}%>, and <%= link_to "CFI", cfi_path, class: "text-sky-600 hover:underline", data: {turbo: false}%> training at SimpliFly, we have an exciting opportunity for you. As a testament to our confidence in your abilities, we offer a guaranteed interview for a teaching position as a CFI within our flight school. This exclusive opportunity allows you to showcase the knowledge and skills you have acquired during your training journey with us. Join our team of dedicated instructors, inspire future aviators, and make a meaningful impact in the aviation community. Take the next step in your career as a CFI with SimpliFly and let your passion for aviation soar.</p>
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10 bg-slate-50">
+<section class="flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10 bg-gradient-to-r from-slate-900 to-sky-950 text-white">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center uppercase font-header">Step 1. Medical Exam</h3>
-    <p class="w-3/4">
-      The Federal Aviation Administration (FAA) requires all pilots to meet certain medical standards to ensure that they are physically and mentally fit to fly. At SimpliFly, we understand that the medical exam can seem daunting, which is why we provide support and guidance to our students throughout the process.
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center uppercase">Medical Exam</h3>
+    <p class="w-3/4 font-header text-gray-200">
+      The Federal Aviation Administration (FAA) mandates that pilots meet specific medical criteria to ensure their fitness for flying, both physically and mentally. At Pitcairn Flight Academy, we acknowledge that the medical evaluation may appear intimidating, and that's why we offer guidance and assistance to our students as they navigate this process.
     </p>
-    <p class="w-3/4 py-10">
-      We work closely with certified aviation medical examiners and will be able to link you up with an Aviation Medical Examiner (AME).  Our experienced team of instructors will help you through the exam process, explain what the exam entails, and what conditions may disqualify you from obtaining a pilot's license. We'll provide you with tips on how to prepare for the exam, including what to bring, what to expect on the day, and how to deal with any potential issues that may arise. 
+    <p class="w-3/4 py-10 font-header text-gray-200">
+      We maintain close partnerships with certified aviation medical examiners and can connect you with an Aviation Medical Examiner (AME). Our skilled team of instructors is here to guide you through the examination procedure, outlining its components and potential disqualifying conditions for obtaining a pilot's license. We'll also arm you with practical advice on exam preparation, covering what to bring, what to anticipate on the examination day, and how to handle any potential challenges that may arise.
     </p>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "", alt: "FAA Logo", class: "lg:h-screen-1/2 px-10 object-contain"%>
+    <%=image_tag "pitcairn-flight-medical-exam.webp", alt: "FAA Medical Exam", class: "lg:w-5/6 lg:rounded-2xl"%>
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row-reverse items-center pt-10 pb-0 lg:py-10 bg-slate-50">
+<section class="flex flex-col lg:flex-row-reverse items-center pt-10 pb-0 lg:py-10 bg-gradient-to-r from-slate-900 to-sky-950 text-white">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center uppercase font-header">Step 2. Written Exam</h3>
-    <p class="w-3/4">
-      Obtaining your pilot's license involves passing a written exam, which serves as the crucial second step in the process. This comprehensive examination encompasses a wide range of subjects, including regulations, airspace, weather, aerodynamics, and aircraft performance. It serves as a means to assess your knowledge and ensure that you possess a deep understanding of the essential aspects required to be a safe and competent pilot.
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center uppercase">Written Exam</h3>
+    <p class="w-3/4 font-header text-gray-200">
+      Earning your pilot's license requires successfully completing a pivotal written exam. This comprehensive test covers a wide spectrum of topics, from regulations and airspace to weather, aerodynamics, and aircraft performance. It's designed to evaluate your knowledge and confirm your grasp of the fundamental elements necessary for safe and proficient piloting.
     </p>
-    <p class="w-3/4 py-10">
-      At SimpliFly, we recognize the challenges that the written exam may present, and we are committed to supporting our students in their preparation. Our dedicated approach includes providing comprehensive ground school training, led by experienced instructors who will assist you in navigating the study materials. Through their guidance, you will gain a clear comprehension of the key concepts covered in the exam, empowering you to approach it with confidence and proficiency.
+    <p class="w-3/4 py-10 font-header text-gray-200">
+      We understand the potential challenges of completing the written exam, and we're fully devoted to aiding our students in their readiness. Our dedicated strategy involves offering in depth ground school training, led by seasoned instructors who will help you in mastering the study materials. With their guidance, you'll acquire a solid grasp of the essential exam topics, enabling you to complete the written exam with assurance and competence.
     </p>
   </div>
   <div class="lg:w-1/2 flex flex-col items-center">
-    <%=image_tag "" , alt: "Student pilot and CFI doing a ground school lesson outside", class: "lg:w-5/6 lg:rounded-2xl"%>
+    <%=image_tag "pitcairn-flight-written-exam.webp" , alt: "FAA Written Exam Preparation", class: "lg:w-5/6 lg:rounded-2xl"%>
   </div>
 </section>
 
-<section class="flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10 bg-slate-50">
+<section class="flex flex-col lg:flex-row items-center pt-10 pb-0 lg:py-10 bg-gradient-to-r from-slate-900 to-sky-950 text-white">
   <div class="flex flex-col items-center lg:w-1/2 p-text">
-    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center uppercase font-header">Step 3. Flight Exam</h3>
-    <p class="w-3/4">
-      The flight exam, also known as the checkride, is the final step towards obtaining your pilot's license. It is designed to assess your ability to operate an aircraft safely and competently in various flight scenarios. The exam consists of both oral and practical components and is conducted by a certified FAA examiner.
+    <h3 class="text-3xl font-semibold pb-10 font-sans mx-5 text-center uppercase">Practical Flight Exam</h3>
+    <p class="w-3/4 font-header text-gray-200">
+      The flight exam, commonly referred to as the checkride, is the last step in securing your pilot's license. Its purpose is to evaluate your capacity to operate an aircraft safely and proficiently across a range of flight scenarios. This examination comprises both oral and practical segments and is administered by an accredited FAA examiner.
     </p>
-    <p class="w-3/4 py-10">
-      SimpliFly provides our students with comprehensive flight training to ensure that they are well prepared. You can be confident that you're receiving the best possible training and support to pass the flight exam and become a licensed pilot. Our experienced instructors will ensure that you have everything you need to succeed. 
+    <p class="w-3/4 py-10 font-header text-gray-200">
+      At Pitcairn Flight Academy, we offer our students thorough flight training to guarantee their readiness. Rest assured that you're benefiting from top notch training and assistance to excel in the flight exam and attain your pilot's license. Our seasoned instructors will see to it that you're equipped with everything necessary for success.
     </p>
-    <p class="w-3/4 pb-10 font-semibold font-sans">
-    Start your flight training with us today and experience the thrill of flying!
+    <p class="w-3/4 pb-10 font-bold text-xl">
+    Start your flight training with us today and experience the joy of flying!
     </p>
   </div>
   <div class="flex flex-col items-center lg:w-1/2">
-    <%=image_tag "", alt: "Student passing ppl checkride", class: "lg:h-screen-3/4 lg:rounded-2xl"%>
+    <%=image_tag "pitcairn-flight-in-a-cessna.webp", alt: "Student and Instructor in a plane", class: "lg:h-screen-3/4 lg:rounded-2xl"%>
   </div>
 </section>
 
 
 <%= render "shared/cta_fly_with"%>
 <%#= render "shared/cta_book"%>
-<%= render "shared/cta_next_steps"%>
+<%= render "shared/contact_turboframe"%>
+
 <%= render "shared/footer"%>
 
 

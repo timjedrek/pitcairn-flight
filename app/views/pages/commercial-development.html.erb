@@ -6,32 +6,34 @@
 <%= render "shared/header"%>
 
 <div class="min-h-screen bg-gray-800 text-gray-100">
+  <%= image_tag "pitcairn-cessna-parked.webp", alt: "cessna parked", class: "lg:hidden object-contain"%>
 	<div class="p-6 space-y-8">
 		<main>
 			<div class="container mx-auto space-y-16">
         <header class="bg-gray-800 text-gray-100">
-          <div class="container flex flex-col justify-center p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
-            <div class="flex items-center justify-center p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128">
+          <div class="container flex flex-col justify-center p-0 md:p-6 mx-auto sm:py-12 lg:py-24 lg:flex-row lg:justify-between">
+            <div class="hidden lg:flex items-center justify-center p-0 sm:p-6 mt-8 lg:mt-0 h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128 ">
               
               <%= image_tag "pitcairn-cessna-parked.webp", alt: "cessna parked", class: "object-contain h-72 sm:h-80 lg:h-96 xl:h-112 2xl:h-128"%>
             </div>
             <div class="flex flex-col justify-center p-6 text-center rounded-sm lg:max-w-md xl:max-w-lg lg:text-left">
-              <h1 class="text-5xl font-bold leadi sm:text-6xl">Your
+              <h1 class="text-4xl font-bold leadi sm:text-6xl"><span class="hidden lg:block">Your</span>
                 <span class="text-teal-500">Commercial</span> Pilot Training
               </h1>
               <p class="mt-6 mb-8 text-lg sm:mb-12 font-header">Pottstown Heritage Field Flight School. 
                 <br class="hidden md:inline lg:hidden">Finish your commericial pilot training with us.
               </p>
               <div class="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-                <a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold rounded bg-teal-500 text-gray-900">Enroll Today</a>
-                <div rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold border rounded border-gray-100 cursor-pointer">Learn more</div>
+                <a rel="noopener noreferrer" href="#" class="px-8 py-3 text-lg font-semibold rounded bg-teal-500 text-gray-900 hover:scale-105 duration-300">Enroll Today</a>
+                <div id="learn-more-button" class="hidden lg:block px-8 py-3 text-lg font-semibold border rounded border-gray-100 cursor-pointer hover:scale-105 duration-300">Learn more</div>
+                <div id="learn-more-button-mobile" class="lg:hidden px-8 py-3 text-lg font-semibold border rounded border-gray-100 cursor-pointer hover:scale-105 duration-300">Learn more</div>
               </div>
             </div>
           </div>
         </header>
 
 
-        <section>
+        <section id="commercial-content">
 					<span class="block mb-2 text-base font-semibold uppercase lg:text-center text-teal-500">How it works</span>
 					<h2 class="text-5xl font-bold lg:text-center text-gray-50">Get Your Commercial Certificate</h2>
 					<div class="grid gap-6 my-16 lg:grid-cols-3">
@@ -142,7 +144,24 @@
       contactFrame.scrollIntoView({ behavior: 'smooth' });
     }
   });
-</script>
+  document.getElementById('learn-more-button').addEventListener('click', function() {
+    const commercialContent = document.getElementById('commercial-content');
 
+    if (commercialContent) {
+      const offset = -15; // Adjust the offset as needed
+      const targetPosition = commercialContent.offsetTop + offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+    document.getElementById('learn-more-button-mobile').addEventListener('click', function() {
+    const commercialContent = document.getElementById('commercial-content');
+
+    if (commercialContent) {
+      const offset = 120; // Adjust the offset as needed
+      const targetPosition = commercialContent.offsetTop + offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+</script>
 
 

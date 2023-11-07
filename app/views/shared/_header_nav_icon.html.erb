@@ -3,7 +3,7 @@ x-data="{ atTop: false }"
 >
 <!--Slide in logo desktop-->
   <%=link_to root_path do%>
-    <div class="lg:block hidden bottom-0 absolute
+    <div class="lg:block hidden bottom-0 absolute hover:scale-105
         p-2 transition duration-500 ease-in-out -translate-x-[50vw]"
         :class="{ 'shadow-lg -translate-x-[32vw] ': atTop, '-translate-x-[50vw]': !atTop}"
         @scroll.window="atTop = (window.pageYOffset < 10 ) ? false: true"
@@ -249,5 +249,12 @@ x-data="{ atTop: false }"
     </div> 
     <!--Sliding in menu on press (when open = true)-->
     <%= render "shared/header_nav_mobile_menu"%>
+  </div>
+
+
+  <div class="absolute top-3 translate-x-[55vw]  duration-500 hover:scale-105 " 
+        :class="{ 'translate-x-[44vw]': atTop, 'translate-x-[55vw]': !atTop}"
+        @scroll.window="atTop = (window.pageYOffset < 10 ) ? false: true">
+    <%= link_to "CONTACT US", contact_path, data: { turbo: false }, class: "border rounded-xl border-white px-2 py-1 text-white transition duration-300 font-light"%>
   </div>
 </nav>

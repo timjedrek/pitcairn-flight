@@ -1,6 +1,18 @@
 <nav class="sticky top-0 z-50 h-16 lg:h-12 flex flex-row justify-center items-center bg-slate-900/90 text-white drop-shadow-2xl transform-gpu "
 x-data="{ atTop: false }"
 >
+<!--Slide in logo desktop-->
+  <%=link_to root_path do%>
+    <div class="lg:block hidden bottom-0 absolute
+        p-2 transition duration-500 ease-in-out -translate-x-[50vw]"
+        :class="{ 'shadow-lg -translate-x-[32vw] ': atTop, '-translate-x-[50vw]': !atTop}"
+        @scroll.window="atTop = (window.pageYOffset < 10 ) ? false: true"
+        x-data="{ open: false }">
+      <div class="w-56 sm:w-48">
+        <%= image_tag "pitcairn-logo-400-white.webp", class: ""%>
+      </div>
+    </div>
+  <% end %>
   <!--JS for drops-->
   <div class="hidden lg:flex flex-row font-header gap-10 items-center text-base xl:text-xl " 
     x-data="{ 
@@ -213,16 +225,20 @@ x-data="{ atTop: false }"
 
   <!--<div class="lg:hidden mr-5" x-data="{ open: false }">-->
   <div class="overflow-hidden flex" x-data="{ open: false }">
-    <!--Slide in logo-->
-    <div class="lg:hidden mr-5 -translate-x-[60rem] absolute
-        p-2 transition duration-500 ease-in-out"
-        :class="{ 'shadow-lg translate-x-[10%] ': atTop, '-translate-x-[60rem]': !atTop}"
-        @scroll.window="atTop = (window.pageYOffset < 260) ? false: true"
-        x-data="{ open: false }">
-      <div class="w-56 sm:w-48">
-        <%= image_tag "pitcairn-logo-400-white.webp", class: ""%>
+    <!--Slide in logo mobile-->
+    <%=link_to root_path do%>
+      <div class="lg:hidden mr-5 -translate-x-[60rem] absolute
+          p-2 transition duration-500 ease-in-out"
+          :class="{ 'shadow-lg translate-x-[10%] ': atTop, '-translate-x-[60rem]': !atTop}"
+          @scroll.window="atTop = (window.pageYOffset < 260) ? false: true"
+          x-data="{ open: false }">
+        <div class="w-56 sm:w-48">
+          <%= image_tag "pitcairn-logo-400-white.webp", class: ""%>
+        </div>
       </div>
-    </div>
+    <% end %>
+
+    
     <!--Hamburger-->
     <div class="lg:hidden grid w-screen place-items-center
           font-lg p-2 transition duration-500 ease-in-out"

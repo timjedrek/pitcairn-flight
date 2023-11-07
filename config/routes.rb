@@ -57,7 +57,7 @@ Rails.application.routes.draw do
   get 'why-become-a-pilot', to: 'pages#why_pilot', as: :why_pilot
 
   get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
-  get 'cmdev', to: 'pages#commercial-development'
+  #get 'cmdev', to: 'pages#commercial-development'  ##DEV PAGE
   get 'instrument-rating', to: 'pages#instrument', as: :instrument
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   

@@ -32,7 +32,7 @@ x-data="{ atTop: false }"
     <!--MENU ITEM 1-->
     <div class="" x-on:mouseover="fly_drop = true" x-on:mouseleave="fly_drop = false">
       <%= link_to "DISCOVERY FLIGHT", discovery_flight_path, data: { turbo: false }, target: "blank", class: "hover:text-white link-underline" %>
-      <div class="dropshadow-xl bg-slate-900/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-[0.61rem] right-[41.7rem]" x-cloak x-show="fly_drop"
+      <div class="dropshadow-xl bg-slate-900/90 rounded-b-xl absolute z-50 pb-5 pt-5 mt-[0.61rem] right-[42.7rem]" x-cloak x-show="fly_drop"
         x-transition:enter="transition ease-out duration-300"
         x-transition:enter-start="opacity-0 transform scale-90"
         x-transition:enter-end="opacity-100 transform scale-100"
@@ -83,7 +83,7 @@ x-data="{ atTop: false }"
           <div class="items-center hover:text-white">
             <%= link_to root_path, data: { turbo: false }, class: "hover:text-white" do %>
               <div class="flex flex-row items-center" x-data="{ isHovered: false, isOut: false }" x-on:mouseenter="isHovered = true, isOut = false" x-on:mouseleave="isHovered = false, isOut = true; setTimeout(() => { isOut = false }, 500)">
-                START YOUR PILOT CAREER
+                AIRCRAFT RENTALS
                 <svg id="plane" viewBox="0 0 18.998 17.118" class="fill-teal-500 h-4 ml-3 opacity-0" 
                   :class="{'animate-plane-enter': isHovered, 'animate-plane-leave': isOut}"
                   x-transition:leave="() => { isOut = false }"

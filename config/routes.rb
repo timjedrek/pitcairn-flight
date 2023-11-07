@@ -60,7 +60,7 @@ Rails.application.routes.draw do
   #get 'cmdev', to: 'pages#commercial-development'  ##DEV PAGE
   get 'instrument-rating', to: 'pages#instrument', as: :instrument
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
-  
+  get 'cfidev', to: 'pages#cfi'
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated

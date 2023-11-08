@@ -14,7 +14,8 @@
 			</div>
 		</div>
 	</section>
-	<!--<section class="p-6 bg-gray-800 text-gray-100">
+	<%# BEGIN 
+  <section class="p-6 bg-gray-800 text-gray-100">
 		<div class="container grid justify-center grid-cols-2 mx-auto text-center lg:grid-cols-3">
 			<div class="flex flex-col justify-start m-2 lg:m-6">
 				<p class="text-4xl font-bold leadi lg:text-6xl">4</p>
@@ -41,14 +42,15 @@
 				<p class="text-sm sm:text-base">Workshops</p>
 			</div>
 		</div>
-	</section>-->
+	</section>
+  END %>
 	<section class="py-8" id="rental-content">
 		<div class="container mx-auto">
 			<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl">
 				<h2 class="text-2xl font-bold leadi sm:text-4xl">Our Aircraft Availability</h2>
 				<p class="px-8 my-4 font-header">We pride ourselves in maintaining a great modern fleet of Cessna 152s, Cessna 172s, and a Beechcraft Sierra.  Our aircraft are great training platforms and excellent for building flying time and experience.</p>
 			</div>
-			<div class="grid grid-cols-5 p-4 md:p-8">
+			<!--<div class="grid grid-cols-5 p-4 md:p-8">
 				<div class="flex justify-center px-4 col-span-full md:col-span-1 md:flex-col md:justify-start md:items-start">
 					<button class="p-2 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-teal-500 text-gray-50">Cessna 152</button>
 					<button class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-gray-300 text-gray-400">Cessna 172</button>
@@ -58,9 +60,25 @@
 				<div class="grid gap-12 py-4 text-center sm:grid-cols-2 col-span-full md:col-span-4 md:text-left">
 					<%= image_tag "pitcairn-flight-cessna-152.webp", alt:"Pitcairn Flight Academy Cessna 152", class: "col-span-2"%>
 				</div>
-			</div>
+			</div>-->
+
+      <div x-data="{ selectedImage: 'cessna-152' }" class="grid grid-cols-5 p-4 md:p-8">
+        <div class="flex justify-center px-4 col-span-full md:col-span-1 md:flex-col md:justify-start md:items-start">
+          <button @click="selectedImage = 'cessna-152'" class="p-2 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-teal-500 text-gray-50">Cessna 152</button>
+          <button @click="selectedImage = 'cessna-172'" class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-gray-300 text-gray-400">Cessna 172</button>
+          <button @click="selectedImage = 'beechcraft'" class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-gray-300 text-gray-400">Beechcraft Sierra</button>
+        </div>
+        <div class="grid gap-12 py-4 text-center sm:grid-cols-2 col-span-full md:col-span-4 md:text-left">
+          <%= image_tag 'pitcairn-flight-cessna-152.webp', alt: 'Pitcairn Flight Academy Cessna 152', class: 'col-span-2 lg:w-3/4', 'x-show': 'selectedImage === "cessna-152"' %>
+          <%= image_tag 'pitcairn-flight-cessna-172.webp', alt: 'Pitcairn Flight Academy Cessna 172', class: 'col-span-2 lg:w-3/4', 'x-show': 'selectedImage === "cessna-172"' %>
+          <%= image_tag 'pitcairn-flight-beechcraft.webp', alt: 'Pitcairn Flight Academy Beechcraft Sierra', class: 'col-span-2 lg:w-3/4', 'x-show': 'selectedImage === "beechcraft"' %>
+        </div>
+      </div>
+
 		</div>
 	</section>
+  
+
 </div>
 
 <div class="" id="contactframe">

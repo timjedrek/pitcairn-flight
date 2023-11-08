@@ -17,9 +17,9 @@
     </div>
     <div class="mx-auto mt-10 max-w-2xl lg:mx-0 lg:max-w-none">
       <div class="grid grid-cols-1 gap-x-8 gap-y-6 text-base font-semibold leading-7 font-header text-white sm:grid-cols-2 md:flex lg:gap-x-10">
-        <%= link_to "Discovery Flight #{content_tag(:span, "→".html_safe)}".html_safe, discovery_flight_path, class: "hover:text-teal-500 duration-300" %>
+        <%= link_to "Discovery Flight #{content_tag(:span, "→".html_safe)}".html_safe, discovery_flight_path, target: "blank", class: "hover:text-teal-500 duration-300" %>
         <%= link_to "Training Program #{content_tag(:span, "→".html_safe)}".html_safe, pilot_training_path, class: "hover:text-teal-500 duration-300" %>
-        <%= link_to "Enroll Today #{content_tag(:span, "→".html_safe)}".html_safe, root_path, class: "hover:text-teal-500 duration-300" %>
+        <%= link_to "Enroll Today #{content_tag(:span, "→".html_safe)}".html_safe, enroll_path, target: "blank", class: "hover:text-teal-500 duration-300" %>
         <%= link_to "Contact Us #{content_tag(:span, "→".html_safe)}".html_safe, contact_path, class: "hover:text-teal-500 duration-300" %>
 
       </div>

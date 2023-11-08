@@ -32,7 +32,7 @@
           </div>
         </div>
       
-      <%= link_to "ENROLL TODAY", root_path,  target: "blank", data: { turbo: false }, class: "btn-primary mt-3 mb-10" %>
+      <%= link_to "ENROLL TODAY", enroll_path,  target: "blank", data: { turbo: false }, class: "btn-primary mt-3 mb-10" %>
     </div>
     <div class="flex flex-col items-center lg:w-1/2">
       <%= image_tag "pitcairn-flight-cfi-in-front-of-plane.webp", alt: "pilots in front of plane", class: "lg:w-4/5 lg:rounded-xl"%>
@@ -60,7 +60,7 @@
         </p>
       </div>
       <div class="pb-10">
-        <%= link_to quiz_path do%>
+        <%= link_to quiz_path, target: "blank" do%>
           <div class="btn-primary font-sans">TAKE THE QUIZ</div>
         <%end%>
       </div>

@@ -62,11 +62,12 @@ Rails.application.routes.draw do
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'become-a-cfi', to: 'pages#cfi', as: :cfi
   get 'airplane-rentals', to: 'pages#rentals', as: :rentals
+  get 'why-pitcairn-flight-academy', to: 'pages#why_pitcairn', as: :why_pitcairn
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
   #get 'flexible-pilot-training', to: 'pages#flexible', as: :flexible
-  #get 'why-simplifly', to: 'pages#why_simplifly', as: :why_simplifly
+  
   #get 'financing', to: 'pages#financing', as: :financing
   #get 'pilot-training-pricing-calculator', to: 'pages#cost' 
   #get 'approximate-pilot-training-costs', to: 'pages#cost', as: :cost

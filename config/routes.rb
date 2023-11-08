@@ -61,6 +61,7 @@ Rails.application.routes.draw do
   get 'instrument-rating', to: 'pages#instrument', as: :instrument
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'become-a-cfi', to: 'pages#cfi', as: :cfi
+  get 'airplane-rentals', to: 'pages#rentals', as: :rentals
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated

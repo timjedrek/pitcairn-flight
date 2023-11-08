@@ -1,0 +1,100 @@
+<%= render "shared/header"%>
+
+<div class="space-y-12 bg-gray-800 text-gray-100 pt-10">	
+	<section>
+		<div class="container flex flex-col items-center px-4 py-8 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl">
+			<h1 class="text-4xl font-bold leadi sm:text-5xl">Aircraft Rental at
+				<span class="text-teal-500">Pitcairn Flight </span>Academy
+			</h1>
+			<p class="px-8 mt-8 mb-12 text-lg font-header">We're the best known secret in the Philadelphia area.  A flight school at Heritage Field offer airplane rentals</p>
+			<div class="flex flex-wrap justify-center">
+				<button id="contact-button" class="px-8 py-3 m-2 text-lg font-semibold rounded bg-teal-500 text-gray-900 hover:scale-105 duration-300">Contact Us</button>
+				<button id="learn-more-button" class="hidden lg:block px-8 py-3 m-2 text-lg border rounded text-gray-50 border-gray-700 hover:scale-105 duration-300">Learn more</button>
+        <button id="learn-more-button-mobile" class="lg:hidden px-8 py-3 m-2 text-lg border rounded text-gray-50 border-gray-700 hover:scale-105 duration-300">Learn more</button>
+			</div>
+		</div>
+	</section>
+	<!--<section class="p-6 bg-gray-800 text-gray-100">
+		<div class="container grid justify-center grid-cols-2 mx-auto text-center lg:grid-cols-3">
+			<div class="flex flex-col justify-start m-2 lg:m-6">
+				<p class="text-4xl font-bold leadi lg:text-6xl">4</p>
+				<p class="text-sm sm:text-base">Airplanes</p>
+			</div>
+			<div class="flex flex-col justify-start m-2 lg:m-6">
+				<p class="text-4xl font-bold leadi lg:text-6xl">3</p>
+				<p class="text-sm sm:text-base">Instructors</p>
+			</div>
+			<div class="flex flex-col justify-start m-2 lg:m-6">
+				<p class="text-4xl font-bold leadi lg:text-6xl">50+</p>
+				<p class="text-sm sm:text-base">Students</p>
+			</div>
+			<div class="flex flex-col justify-start m-2 lg:m-6">
+				<p class="text-4xl font-bold leadi lg:text-6xl">8</p>
+				<p class="text-sm sm:text-base">TED talks</p>
+			</div>
+			<div class="flex flex-col justify-start m-2 lg:m-6">
+				<p class="text-4xl font-bold leadi lg:text-6xl">22</p>
+				<p class="text-sm sm:text-base">Years of experience</p>
+			</div>
+			<div class="flex flex-col justify-start m-2 lg:m-6">
+				<p class="text-4xl font-bold leadi lg:text-6xl">10+</p>
+				<p class="text-sm sm:text-base">Workshops</p>
+			</div>
+		</div>
+	</section>-->
+	<section class="py-8" id="rental-content">
+		<div class="container mx-auto">
+			<div class="p-4 mx-auto text-center md:px-10 lg:px-32 xl:max-w-3xl">
+				<h2 class="text-2xl font-bold leadi sm:text-4xl">Our Aircraft Availability</h2>
+				<p class="px-8 my-4 font-header">We pride ourselves in maintaining a great modern fleet of Cessna 152s, Cessna 172s, and a Beechcraft Sierra.  Our aircraft are great training platforms and excellent for building flying time and experience.</p>
+			</div>
+			<div class="grid grid-cols-5 p-4 md:p-8">
+				<div class="flex justify-center px-4 col-span-full md:col-span-1 md:flex-col md:justify-start md:items-start">
+					<button class="p-2 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-teal-500 text-gray-50">Cessna 152</button>
+					<button class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-gray-300 text-gray-400">Cessna 172</button>
+					<button class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-gray-300 text-gray-400">Beechcraft Sierra</button>
+					
+				</div>
+				<div class="grid gap-12 py-4 text-center sm:grid-cols-2 col-span-full md:col-span-4 md:text-left">
+					<%= image_tag "pitcairn-flight-cessna-152.webp", alt:"Pitcairn Flight Academy Cessna 152", class: "col-span-2"%>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div class="" id="contactframe">
+  <%= render "shared/contact_turboframe"%>
+</div>
+<%= render "shared/footer"%>
+
+<!--Sticky div-->
+</div>
+
+<script>
+  document.getElementById('contact-button').addEventListener('click', function() {
+    const contactFrame = document.getElementById('contactframe');
+
+    if (contactFrame) {
+      contactFrame.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+  document.getElementById('learn-more-button').addEventListener('click', function() {
+    const commercialContent = document.getElementById('rental-content');
+
+    if (commercialContent) {
+      const offset = -15; // Adjust the offset as needed
+      const targetPosition = commercialContent.offsetTop + offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+    document.getElementById('learn-more-button-mobile').addEventListener('click', function() {
+    const commercialContent = document.getElementById('rental-content');
+
+    if (commercialContent) {
+      const offset = 120; // Adjust the offset as needed
+      const targetPosition = commercialContent.offsetTop + offset;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+</script>

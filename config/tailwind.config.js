@@ -132,6 +132,7 @@ module.exports = {
         'cessna-hangar' : "url('pitcairn-flight-cessnas-on-the-ramp-in-front-of-hangar.webp')",
         'cessna-start' : "url('pitcairn-flight-bg-blue-cessna.webp')",
         'twin-cessna' : "url('pitcairn-flight-bg-twin-cessnas.webp')",
+        'cessna-ramp' : "url('pitcairn-flight-bg-cessna-ramp.webp')",
         
 
         'ctahead' : "url('cessna-sunset.webp')",

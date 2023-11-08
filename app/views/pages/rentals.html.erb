@@ -62,18 +62,19 @@
 				</div>
 			</div>-->
 
-<div x-data="{ selectedImage: 'cessna-152' }" class="grid grid-cols-5 p-4 md:p-8">
-    <div class="flex justify-center px-4 col-span-full md:col-span-1 md:flex-col md:justify-start md:items-start">
-        <button @click="selectedImage = 'cessna-152'" class="p-2 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-teal-500 text-gray-50">Cessna 152</button>
-        <button @click="selectedImage = 'cessna-172'" class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-gray-300 text-gray-400">Cessna 172</button>
-        <button @click="selectedImage = 'beechcraft'" class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3 border-gray-300 text-gray-400">Beechcraft Sierra</button>
-    </div>
-    <div class="grid gap-12 py-4 text-center sm:grid-cols-2 col-span-full md:col-span-4 md:text-left">
-        <img x-show="selectedImage === 'cessna-152'" src="<%= image_path('pitcairn-flight-cessna-152.webp') %>" alt="Pitcairn Flight Academy Cessna 152" class="col-span-2 lg:w-3/4" x-transition:enter="transform ease-out duration-300 transition" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
-        <img x-show="selectedImage === 'cessna-172'" src="<%= image_path('pitcairn-flight-cessna-172.webp') %>" alt="Pitcairn Flight Academy Cessna 172" class="col-span-2 lg:w-3/4" x-transition:enter="transform ease-out duration-300 transition" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
-        <img x-show="selectedImage === 'beechcraft'" src="<%= image_path('pitcairn-flight-beechcraft.webp') %>" alt="Pitcairn Flight Academy Beechcraft Sierra" class="col-span-2 lg:w-3/4" x-transition:enter="transform ease-out duration-300 transition" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
-    </div>
-</div>
+      <div x-data="{ selectedImage: 'cessna-152' }" class="grid grid-cols-5 p-4 md:p-8">
+        <div class="flex justify-center px-4 col-span-full md:col-span-1 md:flex-col md:justify-start md:items-start">
+          <button @click="selectedImage = 'cessna-152'" :class="{ 'border-teal-500 text-gray-50': selectedImage === 'cessna-152', 'border-gray-300 text-gray-400': selectedImage !== 'cessna-152' }" class="p-2 border-b-2 md:border-l-2 md:border-b-0 md:py-3">Cessna 152</button>
+          <button @click="selectedImage = 'cessna-172'" :class="{ 'border-teal-500 text-gray-50': selectedImage === 'cessna-172', 'border-gray-300 text-gray-400': selectedImage !== 'cessna-172' }" class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3">Cessna 172</button>
+          <button @click="selectedImage = 'beechcraft'" :class="{ 'border-teal-500 text-gray-50': selectedImage === 'beechcraft', 'border-gray-300 text-gray-400': selectedImage !== 'beechcraft' }" class="px-2 py-1 border-b-2 md:border-l-2 md:border-b-0 md:py-3">Beechcraft Sierra</button>
+        </div>
+        <div class="grid gap-12 py-4 text-center sm:grid-cols-2 col-span-full md:col-span-4 md:text-left">
+          <img x-show="selectedImage === 'cessna-152'" src="<%= image_path('pitcairn-flight-cessna-152.webp') %>" alt="Pitcairn Flight Academy Cessna 152" class="col-span-2 lg:w-3/4" x-transition:enter="transform ease-out duration-300 transition" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
+          <img x-show="selectedImage === 'cessna-172'" src="<%= image_path('pitcairn-flight-cessna-172.webp') %>" alt="Pitcairn Flight Academy Cessna 172" class="col-span-2 lg:w-3/4" x-transition:enter="transform ease-out duration-300 transition" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
+          <img x-show="selectedImage === 'beechcraft'" src="<%= image_path('pitcairn-flight-beechcraft.webp') %>" alt="Pitcairn Flight Academy Beechcraft Sierra" class="col-span-2 lg:w-3/4" x-transition:enter="transform ease-out duration-300 transition" x-transition:enter-start="translate-x-full" x-transition:enter-end="translate-x-0">
+        </div>
+      </div>
+
 
 
 		</div>

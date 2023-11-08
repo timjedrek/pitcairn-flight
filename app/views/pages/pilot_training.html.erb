@@ -60,7 +60,7 @@
         </p>
       </div>
       <div class="pb-10">
-        <%= link_to quiz_path, target: "blank" do%>
+        <%= link_to quiz_path, target: "blank", data: { turbo: false } do%>
           <div class="btn-primary font-sans">TAKE THE QUIZ</div>
         <%end%>
       </div>

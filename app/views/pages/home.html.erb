@@ -5,7 +5,7 @@
     <h1 class="lg:text-6xl text-3xl font-semibold text-center text-white">PILOT TRAINING IN POTTSTOWN HERITAGE FIELD</h1>
     <h2 class="lg:text-3xl text-xl italic font-semibold py-5 text-center text-white lg:block hidden">Your Flight School by Northwest Philadelphia and Reading</h2>
     <h2 class="text-lg italic font-semibold py-5 text-center text-white lg:hidden">Flight school in the NW Philly & Reading Area</h2>
-    <%= link_to root_path do%>
+    <%= link_to enroll_path, target: "blank", data: { turbo: false } do%>
       <div class="btn-primary font-sans text-sm lg:text-2xl">START FLYING TODAY</div>
     <%end%>
   </div>
@@ -18,7 +18,7 @@
   </div>
 
   <div class="relative flex flex-col lg:flex-row items-center justify-center gap-12 text-slate-200 z-20">
-    <%= link_to pilot_training_path do%>
+    <%= link_to pilot_training_path, data: { turbo: false } do%>
       <div class="flex flex-col items-center">
         <div class="w-72 h-72 overflow-hidden">
           <%= image_tag "pitcairn-philly-airport-from-sky.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "Philadelphia Airport from above.  Photo by formulanone Flickr"%>
@@ -28,7 +28,7 @@
         </div>
       </div>
     <%end%>
-    <%= link_to private_pilot_path do%>
+    <%= link_to private_pilot_path, data: { turbo: false } do%>
       <div class="flex flex-col items-center">
         <div class="w-72 h-72 overflow-hidden">
           <%= image_tag "pitcairn-flight-cfi-fly-with-student.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "CFI at Pitcairn Flight Academy with Student"%>
@@ -38,7 +38,7 @@
         </div>
       </div>
     <%end%>
-    <%= link_to root_path do%>
+    <%= link_to rentals_path, data: { turbo: false } do%>
       <div class="flex flex-col items-center">
         <div class="w-72 h-72 overflow-hidden">
           <%= image_tag "pitcairn-flight-two-cessnas-on-the-ramp.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "Cessna airplanes on the ramp at Pitcairn Flight Academy available for rent"%>
@@ -65,7 +65,7 @@
   <p class="slate-700 max-w-xl pb-5 font-header tracking-tight">
     With our educational methods, access to great reliable aircraft, and a focus on experience driven instruction, aspiring pilots can rest assured that they've chosen the best flight school. Choose Pitcairn Flight Academy and let's fly together.
   </p>
-  <%= link_to root_path do%>
+  <%= link_to enroll_path, data: { turbo: false }, target: "blank" do%>
     <div class="text-sm lg:text-2xl bg-transparent text-black border-2 rounded-xl px-2 py-2 border-black hover:scale-105 duration-300">START FLYING TODAY</div>
   <%end%>
 
@@ -91,7 +91,7 @@
         </p>
       </div>
       <div class="pb-5">
-        <%= link_to quiz_path do%>
+        <%= link_to quiz_path, data: { turbo: false } do%>
           <div class="btn-primary font-sans">TAKE THE QUIZ</div>
         <%end%>
       </div>
@@ -151,8 +151,8 @@
   <div class="flex flex-col-reverse lg:flex-row-reverse">
     <div class="lg:w-1/2 flex flex-col items-center"> 
       <div class="max-w-xl px-5">
-        <h2 class="font-header uppercase text-3xl py-10 text-center">Pitcairn Flight Academy<br>Offers Plane Rentals</h2>
-        <p class="pb-10 text-slate-300">
+        <h2 class=" uppercase text-3xl py-10 text-center">Pitcairn Flight Academy<br>Offers Plane Rentals</h2>
+        <p class="pb-10 text-slate-300 font-header">
           Come fly with us and rent our aircraft.  In our fleet we have Cessna 152s, Cessna 172s, and a Beechcraft Sierra which are available for rental.  Please contact us for more details.  
           Prior to renting one of planes, you'll be added into Flight Schedule Pro.  In addition, we will need to have copy of documents on file which will include emergency contact information, photo ID, medical certificate, TSA citizenship verification, and TSA awareness training.
         </p>
@@ -161,7 +161,7 @@
         </p>
         
       </div>
-      <%= link_to root_path do%>
+      <%= link_to rentals_path, data: { turbo: false } do%>
           <div class="btn-primary mb-10 font-sans">AIRCRAFT RENTAL</div>
         <%end%>
     </div>

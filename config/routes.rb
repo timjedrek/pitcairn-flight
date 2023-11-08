@@ -12,8 +12,8 @@ Rails.application.routes.draw do
   end
 
   devise_for :admins, controllers: { registrations: "registrations", sessions: "sessions" }
-  #root "pages#home"
-  root "messages#home2"
+  root "pages#home"
+  #root "messages#home2"
 
   #post 'uploader/image', to: 'uploader#image' #add upload image to posts 
   #get 'blog', to: 'posts#index', as: :blog
@@ -52,7 +52,7 @@ Rails.application.routes.draw do
   get 'quiz-confirmation', to: 'quiz_results#confirmation', as: :quiz_confirmation
 
   # Static Pages
-  get 'testing', to: 'pages#home'
+  #get 'testing', to: 'pages#home'
   get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
   get 'why-become-a-pilot', to: 'pages#why_pilot', as: :why_pilot
   get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial

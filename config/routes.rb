@@ -55,14 +55,17 @@ Rails.application.routes.draw do
   get 'testing', to: 'pages#home'
   get 'pilot-training', to: 'pages#pilot_training', as: :pilot_training
   get 'why-become-a-pilot', to: 'pages#why_pilot', as: :why_pilot
-
   get 'commercial-pilot-training', to: 'pages#commercial', as: :commercial
-  #get 'cmdev', to: 'pages#commercial-development'  ##DEV PAGE
   get 'instrument-rating', to: 'pages#instrument', as: :instrument
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
   get 'become-a-cfi', to: 'pages#cfi', as: :cfi
   get 'airplane-rentals', to: 'pages#rentals', as: :rentals
   get 'why-pitcairn-flight-academy', to: 'pages#why_pitcairn', as: :why_pitcairn
+  get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
+
+  get 'about-us', to: 'pages#about_us', as: :about_us
+  get 'blog', to: 'pages#blog', as: :blog
+
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated
@@ -77,13 +80,13 @@ Rails.application.routes.draw do
   #get 'airline-pilot-courses', to: 'pages#airline_pilot_courses', as: :airline_pilot_courses
   #get 'pilot-programs', to: 'pages#pilot_programs', as: :programs
   #get 'our-team', to: 'pages#our_team', as: :our_team
-  #get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
+  
   #get 'aircraft-rental', to: 'pages#aircraft_rental', as: :aircraft_rental
   #get 'fixed-wing-airplane-fleet', to: 'pages#fixed_wing', as: :fixed_wing
   #get 'rotary-wing-helicopter-fleet', to: 'pages#rotary_wing', as: :rotary_wing
   #get 'airplane-pilot-training', to: 'pages#airplane_training', as: :airplane_training
   #get 'helicopter-pilot-training', to: 'pages#helicopter_training', as: :helicopter_training
-  #get 'about-ideal-aviation', to: 'pages#about_us', as: :about_us
+  
   #get 'advanced_training', to: 'pages#advanced_training', as: :advanced_training
   #get 'pilot-resources', to: 'pages#pilot_resources', as: :pilot_resources
   #get 'careers', to: 'pages#careers', as: :careers

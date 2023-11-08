@@ -21,14 +21,14 @@ Rails.application.routes.draw do
   
   resources :discover_flights
   resources :messages
-  #resources :enrollments
+  resources :enrollments
   #resources :book_downloads
   #resources :checkouts
   resources :quiz_results
 
   # Enrollment form
-  #get 'enroll-at-simplifly', to: 'enrollments#new', as: :enroll
-  #get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
+  get 'enroll-at-pitcairn-flight-academy', to: 'enrollments#new', as: :enroll
+  get 'enrollment-confirmation', to: 'enrollments#confirmation', as: :enroll_confirmation
 
   # Contact form
   get 'contact-us', to: 'messages#location', as: :contact

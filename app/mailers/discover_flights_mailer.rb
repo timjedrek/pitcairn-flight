@@ -6,9 +6,9 @@ class DiscoverFlightsMailer < ApplicationMailer
     @discover_flight = discover_flight
 
     if Rails.env.production?
-      mail(to: @discover_flight.email, bcc: ["info@pitcairnmailer.com", "flynow@pitcairnflight.com"], subject: "✈️ Discovery Flight at Pitcairn Flight Academy")
+      mail(to: @discover_flight.email, bcc: ["no-reply@pitcairnmailer.com", "flynow@pitcairnflight.com"], subject: "✈️ Discovery Flight at Pitcairn Flight Academy")
     else
-      mail(to: @discover_flight.email, bcc: ["info@pitcairnmailer.com"], subject: "✈️ Discovery Flight at Pitcairn Flight Academy")
+      mail(to: @discover_flight.email, bcc: ["no-reply@pitcairnmailer.com"], subject: "✈️ Discovery Flight at Pitcairn Flight Academy")
     end
 
   end

@@ -1,11 +1,15 @@
 class EnrollmentMailer < ApplicationMailer
 
-  default from: 'no-reply@simplifly-co.com'
+  default from: 'no-reply@pitcairnmailer.com'
 
   def enrollment_email(message)
     @message = message
 
-    mail(to: @message.email, bcc: ["no-reply@simplifly-co.com", "info@simpliflyco.com"], subject: "✈️ Application to Enroll at SimpliFly")
+    if Rails.env.production?
+      mail(to: @message.email, bcc: ["no-reply@pitcairnmailer.com", "flynow@pitcairnflight.com"], subject: "✈️ Application to Enroll at Pitcairn Flight Academy")
+    else
+      mail(to: @message.email, bcc: ["no-reply@pitcairnmailer.com"], subject: "✈️ Application to Enroll at Pitcairn Flight Academy")
+    end
   end
 
 

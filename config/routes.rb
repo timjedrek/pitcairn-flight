@@ -34,7 +34,7 @@ Rails.application.routes.draw do
   get 'contact-us', to: 'messages#location', as: :contact
   get 'contact-confirmation', to: 'messages#confirmation', as: :contact_confirmation
   #get 'visit-pitcairn', to: 'messages#location', as: :location
-  get 'become-a-cfi', to: 'messages#cfi', as: :cfi
+  #get 'become-a-cfi', to: 'messages#cfi', as: :cfi
 
   # Book Download
   #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
@@ -60,7 +60,7 @@ Rails.application.routes.draw do
   #get 'cmdev', to: 'pages#commercial-development'  ##DEV PAGE
   get 'instrument-rating', to: 'pages#instrument', as: :instrument
   get 'private-pilot-training', to: 'pages#private_pilot', as: :private_pilot
-  get 'cfidev', to: 'pages#cfi'
+  get 'become-a-cfi', to: 'pages#cfi', as: :cfi
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated

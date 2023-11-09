@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   before_action :initialize_contact_form
-  invisible_captcha only: [:initalize_contact_form], honeypot: :confirm_email
+  invisible_captcha only: [:initialize_contact_form], honeypot: :confirm_email
 
   private
 

@@ -66,6 +66,8 @@ Rails.application.routes.draw do
   get 'about-us', to: 'pages#about_us', as: :about_us
   get 'blog', to: 'pages#blog', as: :blog
 
+  get 'crm-example', to: 'pages#contact_leadsnap'
+
   #get 'stratus-finance', to: 'pages#stratus', as: :stratus
   #get 'meritize', to: 'pages#meritize', as: :meritize
   #get 'accelerated-pilot-training', to: 'pages#accelerated', as: :accelerated

@@ -1,0 +1,30 @@
+<%= render "shared/header"%>
+
+<section class="relative flex flex-col items-center lg:bg-gradient-to-l bg-gradient-to-b from-slate-900 to-sky-700 px-5 lg:px-0  lg:py-16 py-10" id="form-section">
+
+    
+    <%= turbo_frame_tag 'form-section' , class: "z-20 w-full max-w-2xl bg-white p-5 rounded-xl" do %>
+    <div class="flex flex-col items-center">
+      <h2 class="uppercase text-4xl text-center font-semibold pt-5 font-header">Contact Us</h2>
+      <div class="text-center text-slate-700 max-w-md pb-5" >Fill out the form below and a member of our team will reach out to you shortly</div>
+    </div>
+      <iframe src="https://app.flightschoolcrm.com/embed/load/9dgu9AmYN1TBfo0qBk0r7BgfVoTaYzdj" style="border:none;width:100%;"  class="lead_crm_iframe" scrolling="no"></iframe><script type="text/javascript" src="https://app.flightschoolcrm.com/embed/iframeResizer.min.js"></script>
+    <% end %>
+
+  <!--bg image-->
+  <div class="absolute hidden lg:block z-0">
+    <%= image_tag "pitcairn-logo-wing.svg", alt: "logo backdrop", class: "h-[60vh] z-0 opacity-30"%> 
+  </div>
+  
+</section>
+
+
+
+<%= render "shared/footer"%>
+
+
+
+
+
+<%# Sticky div %>
+</div>

@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   root "pages#home"
   #root "messages#home2"
 
-  #post 'uploader/image', to: 'uploader#image' #add upload image to posts 
-  #get 'blog', to: 'posts#index', as: :blog
-  #resources :posts
+  post 'uploader/image', to: 'uploader#image' #add upload image to posts 
+  get 'blog', to: 'posts#index', as: :blog
+  resources :posts
   
   resources :discover_flights
   resources :messages
@@ -64,7 +64,7 @@ Rails.application.routes.draw do
   get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
 
   get 'about-us', to: 'pages#about_us', as: :about_us
-  get 'blog', to: 'pages#blog', as: :blog
+  #get 'blog', to: 'pages#blog', as: :blog #HIDE... This was a placeholder prior to blog activate
 
   get 'crm-example', to: 'pages#contact_leadsnap'
 

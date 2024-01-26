@@ -64,7 +64,6 @@ Rails.application.routes.draw do
   get 'terms-of-service-privacy-policy', to: 'pages#tos', as: :tos
 
   get 'about-us', to: 'pages#about_us', as: :about_us
-  get 'about-us-draft', to: 'pages#about_us_draft'
   #get 'blog', to: 'pages#blog', as: :blog #HIDE... This was a placeholder prior to blog activate
 
   get 'crm-example', to: 'pages#contact_leadsnap'

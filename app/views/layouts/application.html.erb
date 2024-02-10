@@ -106,14 +106,15 @@
 
     <%# GOOGLE TAG ONLY SHOW DURING PRODUCTION ENVIRONMENT%>
     <% if Rails.env.production? %>
-      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16456738885"></script>
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-PDEKLRKQDD"></script>
       <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
-        gtag('config', 'G-PDEKLRKQDD');
+        gtag('config', 'AW-16456738885');
+        gtag('config', 'G-PDEKLRKQDD'); // Add this line for the second config ID
       </script>
     <%end%>
   </body>

@@ -41,3 +41,10 @@
 </main>
 
 <%= render "shared/footer"%>
+
+<% if Rails.env.production? %>
+  <!-- Event snippet for Form Completion Website conversion page -->
+  <script>
+    gtag('event', 'conversion', {'send_to': 'AW-16456738885/cndfCK7o2JAZEMXQl6c9'});
+  </script>
+<%end%>

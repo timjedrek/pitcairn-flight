@@ -27,7 +27,8 @@ class RecreationalFlightsController < ApplicationController
 
     respond_to do |format|
       if @recreational_flight.save
-        format.html { redirect_to recreational_flight_url(@recreational_flight), notice: "Recreational flight was successfully created." }
+        RecreationalFlightsMailer.recreational_flights_email(@recreational_flight).deliver_later
+        format.html { redirect_to recreational_confirmation_path, notice: "#{@recreational_flight.first_name}" }
         format.json { render :show, status: :created, location: @recreational_flight }
       else
         format.html { render :new, status: :unprocessable_entity }

@@ -44,6 +44,9 @@ Rails.application.routes.draw do
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
   get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
 
+   # Recreational flight form
+  get 'recreational-flight-confirmation', to: 'recreational_flights#confirmation', as: :recreational_confirmation
+
   # Check out form
   #get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout
   #get 'rental-checkout-confirmation', to: 'checkouts#confirmation', as: :checkout_confirmation

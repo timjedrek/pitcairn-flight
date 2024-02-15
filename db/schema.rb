@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_06_16_123024) do
+ActiveRecord::Schema[7.0].define(version: 2024_02_15_173156) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -168,6 +168,21 @@ ActiveRecord::Schema[7.0].define(version: 2023_06_16_123024) do
     t.string "learn_style"
     t.string "structure"
     t.text "guidance"
+  end
+
+  create_table "recreational_flights", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "phone"
+    t.text "occasion"
+    t.date "preferred_date"
+    t.string "preferred_availability"
+    t.date "alternate_date"
+    t.string "alternate_availability"
+    t.text "comments"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

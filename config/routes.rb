@@ -19,7 +19,7 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
 
-  resources :recreational_flights
+  resources :recreational_flights, path: 'recreational-flights'
   resources :discover_flights
   resources :messages
   resources :enrollments

@@ -18,7 +18,8 @@ Rails.application.routes.draw do
   post 'uploader/image', to: 'uploader#image' #add upload image to posts 
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
-  
+
+  resources :recreational_flights
   resources :discover_flights
   resources :messages
   resources :enrollments
@@ -42,6 +43,9 @@ Rails.application.routes.draw do
   # Discovery flight form
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight
   get 'discovery-flight-confirmation', to: 'discover_flights#confirmation', as: :discovery_confirmation
+
+   # Recreational flight form
+  get 'recreational-flight-confirmation', to: 'recreational_flights#confirmation', as: :recreational_confirmation
 
   # Check out form
   #get 'rental-checkout', to: 'checkouts#new', as: :rental_checkout

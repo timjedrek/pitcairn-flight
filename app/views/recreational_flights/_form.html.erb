@@ -1,19 +1,19 @@
 
-<%= form_with(model: discover_flight, class: "contents") do |form| %>
+<%= form_with(model: recreational_flight, class: "contents") do |form| %>
 
   
   <div x-data="{ currentPage: 1 }" class="lg:w-[25rem] px-5">
     
     <div x-show="currentPage === 1" class="flex flex-col justify-between">
       <div class="max-w-sm">
-        <% if discover_flight.errors.any? %>
+        <% if recreational_flight.errors.any? %>
           
           <!--Commented out has it disappearing after 10 secs-->
-          <!--<div x-data="{ showErrors: <%= discover_flight.errors.any? %> }" x-show="showErrors" x-init="setTimeout(() => showErrors = false, 10000)"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">-->
-          <div x-data="{ showErrors: <%= discover_flight.errors.any? %> }"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-            <h2><%= pluralize(discover_flight.errors.count, "mistake") %> need to be fixed</h2>
+          <!--<div x-data="{ showErrors: <%= recreational_flight.errors.any? %> }" x-show="showErrors" x-init="setTimeout(() => showErrors = false, 10000)"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">-->
+          <div x-data="{ showErrors: <%= recreational_flight.errors.any? %> }"  class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
+            <h2><%= pluralize(recreational_flight.errors.count, "mistake") %> need to be fixed</h2>
             <ul>
-              <% discover_flight.errors.each do |error| %>
+              <% recreational_flight.errors.each do |error| %>
                 <li><%= error.full_message %></li>
               <% end %>
             </ul>
@@ -36,46 +36,16 @@
           <%= form.text_field :email, class: "block rounded-md border border-sky-700 outline-none px-3 py-2 mt-2 w-full focus:border-sky-700 focus:ring-sky-700" %>
         </div>
 
-        <%= invisible_captcha :confirm_email, :discover_flight %>
+        <%= invisible_captcha :confirm_email, :recreational_flight %>
 
         <div class="my-5 flex flex-col">
           <span class="text-slate-700 font-semibold text-base">Phone</span>
           <%= form.text_field :phone, placeholder: "###-###-####", class: " placeholder:text-slate-300 block rounded-md border border-sky-700 outline-none px-3 py-2 mt-2 w-full focus:border-sky-700 focus:ring-sky-700" %>
         </div>
 
-        <div class="my-5" x-data="{ selectedAircraft: '' }">
-          <span class="mb-4 font-sans text-lg font-semibold text-slate-700">Select Aviation Goal</span>
-          <div class="flex flex-row justify-start gap-3 pt-5">
-            <label class="inline-flex items-center pb-5">
-              <%= form.radio_button :aircraft, 'Recreation', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
-              <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-sky-700 rounded-md bg-custom-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'Recreation' }">
-                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'Recreation' }">Recreation</span>
-                </span>
-                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'Recreation'"></span>
-              </span>
-            </label>
-
-            <label class="inline-flex items-center pb-5" >
-              <%= form.radio_button :aircraft, 'career', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
-              <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-sky-700 rounded-md bg-custom-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'career' }">
-                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'career' }">Career</span>
-                </span>
-                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'career'"></span>
-              </span>
-            </label>
-
-            <label class="inline-flex items-center pb-5" >
-              <%= form.radio_button :aircraft, 'both', { class: "hidden", "data-x-model" => "selectedAircraft" } %>
-              <span class="relative">
-                <span class="inline-flex items-center justify-center text-slate-700 border border-sky-700 rounded-md bg-custom-50 hover:bg-slate-400" :class="{ 'bg-custom-50': selectedAircraft == 'both' }">
-                  <span class="px-4 py-2 font-sans text-base text-slate-800" :class="{ 'text-slate-700': selectedAircraft == 'both' }">Both</span>
-                </span>
-                <span class="absolute top-0 bottom-0 left-0 right-0 cursor-pointer" @click="selectedAircraft = 'both'"></span>
-              </span>
-            </label>
-          </div>
+        <div class="my-5">
+          <span class="mb-4 font-sans text-lg font-semibold text-slate-700">If for a special occasion, please specify:</span>
+          <%= form.text_area :occasion, rows: 4, class: "block shadow rounded-md border border-sky-700 outline-none px-3 py-2 mt-2 w-full focus:border-sky-700 focus:ring-sky-700" %>
         </div>
       </div>
 
@@ -86,7 +56,7 @@
 
     <div x-show="currentPage === 2" x-cloak>
       <div class="my-5" x-data="{ selectedDate: '' }">
-        <%= form.label "Select Discovery Flight Date", class: "font-semibold text-lg text-slate-700" %>
+        <%= form.label "Select recreationaly Flight Date", class: "font-semibold text-lg text-slate-700" %>
         <div class="grid grid-cols-3 pt-5">
           <% today = Date.today %>
           <% (0..17).each do |i| %>
@@ -185,7 +155,7 @@
         </div>
       </div>
 
-      <div class="mt-10 text-slate-600 italic text-sm">This form is a <span class="font-semibold">request</span> to complete a discovery flight at Pitcairn Flight Academy.  The requested or alternate dates for a flight may or may not be available depending on demand and availability.  <span class="font-semibold">You must talk with a Pitcairn Flight Academy team member and confirm the time and date to ensure you are on the schedule</span>.</div>
+      <div class="mt-10 text-slate-600 italic text-sm">This form is a <span class="font-semibold">request</span> to complete a recreationaly flight at Pitcairn Flight Academy.  The requested or alternate dates for a flight may or may not be available depending on demand and availability.  <span class="font-semibold">You must talk with a Pitcairn Flight Academy team member and confirm the time and date to ensure you are on the schedule</span>.</div>
       <div class="mt-10">
         <%= image_tag "pitcairn-logo-400.webp"%>
       </div>

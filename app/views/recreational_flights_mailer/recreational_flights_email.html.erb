@@ -1,0 +1,30 @@
+<p>Dear <%=@recreational_flight.first_name%>, 
+
+<p>Thank you for requesting a recreational flight on our website.  We'll reach out to your shortly to confirm the exact time and date.</p>
+
+<p>
+The team at Pitcairn Flight Academy<br>
+(610) 495-7000<br>
+flynow@pitcairnflight.com<br>
+</p>
+<br>
+<br>
+  -------- Your Form Submission Details --------
+<br>
+<br>
+First Name: <%=@recreational_flight.first_name%><br>
+Last Name: <%=@recreational_flight.last_name%><br>
+Phone: <%=@recreational_flight.phone%><br>
+Email: <%=@recreational_flight.email%><br>
+<br>
+<br>
+If for a special occasion, please specify: <%=@recreational_flight.occasion%>
+<br>
+<br>
+Is there anything else you'd like us to know: <%=@recreational_flight.comments%>
+<br>
+<br>
+Selected Date: <%=@recreational_flight.preferred_date%><br>
+Selected Time: <%=@recreational_flight.preferred_availability%><br>
+Alternate Date: <%=@recreational_flight.alternate_date%><br>
+Alternate Time: <%=@recreational_flight.alternate_availability%><br>

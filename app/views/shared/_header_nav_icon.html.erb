@@ -5,7 +5,7 @@ x-data="{ atTop: false }"
   <%=link_to root_path do%>
     <div class="lg:block hidden bottom-0 absolute hover:scale-105
         p-2 transition duration-500 ease-in-out -translate-x-[50vw]"
-        :class="{ 'shadow-lg -translate-x-[32vw] ': atTop, '-translate-x-[50vw]': !atTop}"
+        :class="{ 'shadow-lg -translate-x-[23vw] ': atTop, '-translate-x-[50vw]': !atTop}"
         @scroll.window="atTop = (window.pageYOffset < 10 ) ? false: true"
         x-data="{ open: false }">
       <div class="w-56 sm:w-48">

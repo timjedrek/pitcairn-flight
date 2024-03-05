@@ -19,7 +19,8 @@ Rails.application.routes.draw do
   get 'blog', to: 'posts#index', as: :blog
   resources :posts
 
-  resources :recreational_flights, path: 'scenic-rides'
+  resources :recreational_flights, except: :new
+  get 'scenic-rides', to: 'recreational_flights#new', as: :new_recreational_flight
   resources :discover_flights
   resources :messages
   resources :enrollments

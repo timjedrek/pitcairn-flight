@@ -56,7 +56,7 @@
 
     <div x-show="currentPage === 2" x-cloak>
       <div class="my-5" x-data="{ selectedDate: '' }">
-        <%= form.label "Select Recreational Flight Date", class: "font-semibold text-lg text-slate-700" %>
+        <%= form.label "Select Scenic Ride Date", class: "font-semibold text-lg text-slate-700" %>
         <div class="grid grid-cols-3 pt-5">
           <% today = Date.today %>
           <% (0..17).each do |i| %>
@@ -155,7 +155,7 @@
         </div>
       </div>
 
-      <div class="mt-10 text-slate-600 italic text-sm">This form is a <span class="font-semibold">request</span> to complete a recreational flight at Pitcairn Flight Academy.  The requested or alternate dates for a flight may or may not be available depending on demand and availability.  <span class="font-semibold">You must talk with a Pitcairn Flight Academy team member and confirm the time and date to ensure you are on the schedule</span>.</div>
+      <div class="mt-10 text-slate-600 italic text-sm">This form is a <span class="font-semibold">request</span> to complete a Scenic Ride at Pitcairn Flight Academy.  The requested or alternate dates for a flight may or may not be available depending on demand and availability.  <span class="font-semibold">You must talk with a Pitcairn Flight Academy team member and confirm the time and date to ensure you are on the schedule</span>.</div>
       <div class="mt-10">
         <%= image_tag "pitcairn-logo-400.webp"%>
       </div>

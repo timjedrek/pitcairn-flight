@@ -5,7 +5,7 @@ class Message < ApplicationRecord
   validates :name, presence: true
   validates :body, presence: { message: "Tell us how we can help" }
   validates :phone, presence: true, format: { with: /\A\d{10}\z/, message: "Must be a valid 10-digit phone number" }
-  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "Must be a valid email address" }
+  validates :email, presence: true, format: { with: URI::MailTo::EMAIL_REGEXP, message: "must be a valid email address" }
 
   def strip_phone_number
     self.phone = phone.to_s.gsub(/[-() ]/, "")

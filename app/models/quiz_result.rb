@@ -19,6 +19,18 @@ class QuizResult < ApplicationRecord
       "last-name" => "#{self.last_name}",
       "email" => "#{self.email}",
       "phone" => "#{self.phone}",
+      "why_pilot" => "#{self.why_pilot}",
+      "goals" => "#{self.goals}",
+      "previous-training" => "#{self.previous_training}",
+      "learn-style" => "#{self.learn_style}",
+      "structure" => "#{self.structure}",
+      "guidance" => "#{self.guidance}",
+      "wings-lift" => "#{self.wings_lift}",
+      "preferred-date" => "#{self.preferred_date}",
+      "preferred-avaliability" => "#{self.preferred_availability}",
+      "alternate-date" => "#{self.alternate_date}",
+      "alternate-availability" => "#{self.alternate_availability}",
+      "comments" => "#{self.comments}",
     }
     HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
   end

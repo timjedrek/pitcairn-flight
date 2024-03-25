@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   resources :discover_flights
   resources :messages
   resources :enrollments
-  #resources :book_downloads
+  resources :book_downloads
   #resources :checkouts
   resources :quiz_results
 
@@ -39,7 +39,7 @@ Rails.application.routes.draw do
   #get 'become-a-cfi', to: 'messages#cfi', as: :cfi
 
   # Book Download
-  #get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
+  get 'book-download-confirmation', to: 'book_downloads#confirmation', as: :book_download_confirmation
 
   # Discovery flight form
   get 'discovery-flight', to: 'discover_flights#new', as: :discovery_flight

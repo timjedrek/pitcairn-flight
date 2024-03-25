@@ -27,9 +27,7 @@ class BookDownloadsController < ApplicationController
 
   # POST /book_downloads or /book_downloads.json
   def create
-    p 'Create Book Download'
     @book_download = BookDownload.new(book_download_params)
-    p @book_download
 
     respond_to do |format|
       if @book_download.save

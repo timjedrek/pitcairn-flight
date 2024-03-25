@@ -6,9 +6,9 @@ class BookDownloadsMailer < ApplicationMailer
     @book_download = book_download
 
     if Rails.env.production?
-      mail(to: @book_downloadt.email, bcc: ["no-reply@pitcairnmailer.com", "flynow@pitcairnflight.com"], subject: "✈️ Pitcairn Flight Academy FREE Pilot Training Booklet")
+      mail(to: @book_download.email, bcc: ["no-reply@pitcairnmailer.com", "flynow@pitcairnflight.com"], subject: "✈️ Pitcairn Flight Academy FREE Pilot Training Booklet")
     else
-      mail(to: @book_downloadt.email, bcc: ["no-reply@pitcairnmailer.com"], subject: "✈️ Pitcairn Flight Academy FREE Pilot Training Booklet")
+      mail(to: @book_download.email, bcc: ["no-reply@pitcairnmailer.com"], subject: "✈️ Pitcairn Flight Academy FREE Pilot Training Booklet")
     end
   end
 

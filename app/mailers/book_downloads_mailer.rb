@@ -1,11 +1,11 @@
 class BookDownloadsMailer < ApplicationMailer
 
-  default from: 'no-reply@simplifly-co.com'
+  default from: 'flynow@pitcairnflight.com'
 
   def book_downloads(book_download)
     @book_download = book_download
 
-    mail(to: @book_download.email, bcc: ["info@simplifly-co.com", "info@simpliflyco.com"], subject: "✈️ SimpliFly FREE Pilot Training Booklet")
+    mail(to: @book_download.email, bcc: ["info@pitcairnflight.com"], subject: "✈️ Pitcairn Flight FREE Pilot Training Booklet")
   end
 
 

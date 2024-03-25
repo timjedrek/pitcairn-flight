@@ -1,6 +1,6 @@
 class BookDownloadsController < ApplicationController
   before_action :set_book_download, only: %i[ show edit update destroy ]
-  before_action :authenticate_admin!, except: [:create, :confirmation]
+  before_action :authenticate_admin!, except: [:new, :create, :confirmation]
   invisible_captcha only: [:create], honeypot: :confirm_email
 
   def confirmation
@@ -27,7 +27,9 @@ class BookDownloadsController < ApplicationController
 
   # POST /book_downloads or /book_downloads.json
   def create
+    p 'Create Book Download'
     @book_download = BookDownload.new(book_download_params)
+    p @book_download
 
     respond_to do |format|
       if @book_download.save
@@ -45,7 +47,7 @@ class BookDownloadsController < ApplicationController
   #def update
   #  respond_to do |format|
   #    if @book_download.update(book_download_params)
-  #      
+  #
   #      format.html { redirect_to book_download_url(@book_download), notice: "Book download was successfully updated." }
   #      format.json { render :show, status: :ok, location: @book_download }
   #    else

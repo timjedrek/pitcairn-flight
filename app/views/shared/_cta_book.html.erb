@@ -4,7 +4,7 @@
       <!--Text Section-->
       <div class="lg:w-1/2 flex flex-col justify-center items-center pb-10" x-data="{ 'showModal': false }" @keydown.escape="showModal = false">
         <p class="px-5 py-7 lg:px-32 text-center p-text">Still looking for more information on pilot training?</p>
-        <h2 class="px-2 text-3xl text-center font-bold">Get Your <span class="text-ideal-blue">FREE</span> Pilot Training Guide Book!</h2>
+        <h2 class="px-2 text-3xl text-center font-bold font-header">Get Your <span class="text-ideal-blue">FREE</span> Pilot Training Guide Book!</h2>
         <p class="px-5 py-7 lg:px-32 text-center p-text">We've prepared this free booklet which explains everything you need to know for your pilot certificate.</p>
         <button class="btn-primary " @click="showModal = true">
           DOWNLOAD THE FREE BOOK
@@ -17,7 +17,7 @@
         >
           <!-- Modal inner -->
           <div
-              class="w-full lg:w-1/2 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg"
+              class="w-full lg:w-1/2 px-6 py-4 mx-auto text-left bg-white rounded shadow-lg font-sans"
               @click.away="showModal = false"
               x-transition:enter="motion-safe:ease-out duration-300"
               x-transition:enter-start="opacity-0 scale-90"

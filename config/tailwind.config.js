@@ -10,9 +10,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
-        paragraph: ["Inter var", ...defaultTheme.fontFamily.sans],
-        header: ["Quicksand", ...defaultTheme.fontFamily.sans],
+        sans: ["Quicksand", ...defaultTheme.fontFamily.sans],
+        paragraph: ["Quicksand", ...defaultTheme.fontFamily.sans],
+        header: ["Inter var", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         /* Previous color scheme.. Blake said its too dark and not blue/light enough... uh huh ..
@@ -89,18 +89,18 @@ module.exports = {
         },
         marquee: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-138%)" }, // 6 reviews = 168%
+          "100%": { transform: "translateX(-211%)" }, // 6 reviews = 168%
         },
         marquee2: {
-          "0%": { transform: "translateX(138%)" },
+          "0%": { transform: "translateX(211%)" },
           "100%": { transform: "translateX(0%)" },
         },
         marqueemobile: {
           "0%": { transform: "translateX(0%)" },
-          "100%": { transform: "translateX(-152%)" },
+          "100%": { transform: "translateX(-222%)" },
         },
         marquee2mobile: {
-          "0%": { transform: "translateX(152%)" }, // 6 reviews = 174%
+          "0%": { transform: "translateX(222%)" }, // 6 reviews = 174%
           "100%": { transform: "translateX(0%)" },
         },
         "slide-in-left": {
@@ -128,10 +128,10 @@ module.exports = {
         "plane-enter": "plane-enter 0.7s ease-out forwards",
         "plane-leave": "plane-leave 0.3s ease-out forwards",
 
-        marquee: "marquee 55s linear infinite",
-        marquee2: "marquee2 55s linear infinite",
-        marqueemobile: "marqueemobile 55s linear infinite",
-        marquee2mobile: "marquee2mobile 55s linear infinite",
+        marquee: "marquee 45s linear infinite",
+        marquee2: "marquee2 45s linear infinite",
+        marqueemobile: "marqueemobile 54s linear infinite",
+        marquee2mobile: "marquee2mobile 54s linear infinite",
 
         "slide-in-left": "slide-in-left 0.6s ease-out",
         "slide-in-left2": "slide-in-left 0.7s ease-out",

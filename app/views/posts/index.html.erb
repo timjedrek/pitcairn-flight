@@ -11,7 +11,7 @@
     <!-- Section: Design Block -->
     <section class="text-gray-800 pt-12 lg:pt-24 text-center md:text-left">
 
-      <h2 class="text-3xl font-bold pb-12 text-center">Latest articles</h2>
+      <h2 class="text-4xl font-bold pb-12 text-center font-header">Latest articles</h2>
 
       <% @posts.sort_by(&:post_date).reverse_each do |post| %> 
         
@@ -33,7 +33,7 @@
             
             <div class="grow-0 shrink-0 basis-auto w-full md:w-9/12 xl:w-7/12 px-3 mb-6 md:mb-0 mr-auto">
               <%= link_to post, class: "" do%>
-              <h5 class="text-lg font-bold mb-3"><%=post.title%></h5>
+              <h5 class="text-lg font-bold mb-3 font-header"><%=post.title%></h5>
               <div class="mb-3 text-ideal-blue font-medium text-sm flex items-center justify-center md:justify-start">
                 <%= post.category %>
               </div>

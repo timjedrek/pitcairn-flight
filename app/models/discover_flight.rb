@@ -18,6 +18,12 @@ class DiscoverFlight < ApplicationRecord
       "last-name" => "#{self.last_name}",
       "email" => "#{self.email}",
       "phone" => "#{self.phone}",
+      "goals" => "#{self.aircraft}",
+      "preferred-date" => "#{self.preferred_date}",
+      "preferred-availability" => "#{self.preferred_availability}",
+      "alternate-date" => "#{self.alternate_date}",
+      "alternate-availability" => "#{self.alternate_availability}",
+      "comments" => "#{self.comments}",
     }
     HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
   end

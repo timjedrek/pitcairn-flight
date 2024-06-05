@@ -18,6 +18,13 @@ class Enrollment < ApplicationRecord
       "last-name" => "#{self.last_name}",
       "email" => "#{self.email}",
       "phone" => "#{self.phone}",
+      "goals" => "#{self.goals}",
+      "previous_training" => "#{self.previous_training}",
+      "comments" => "#{self.comments}",
+      "preferred_date" => "#{self.preferred_date}",
+      "preferred_availability" => "#{self.preferred_availability}",
+      "alternate_date" => "#{self.alternate_date}",
+      "alternate_availability" => "#{self.alternate_availability}",
     }
     HTTParty.post(ghl_url, body: ghl_payload.to_json, headers: { "Content-Type" => "application/json" })
   end

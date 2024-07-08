@@ -6,6 +6,25 @@
 
 <%= render "shared/header"%>
 
+<!--Hero section-->
+<section class="bg-gray-800 text-gray-100 bg-instrument bg-cover bg-center">
+	<div class="container mx-auto flex flex-col items-center px-4 py-16 text-center md:py-32 md:px-10 lg:px-32 xl:max-w-4xl">
+		<h1 class="text-6xl font-bold font-header">How to get your
+			<span class="text-sky-100">Instrument Rating</span>
+		</h1>
+		<p class="px-8 mt-8 mb-12 text-lg">Fly regardless of the weather and in IFR conditions. </p>
+		<div class="flex flex-wrap justify-center">
+			
+      <div class="flex flex-col lg:flex-row gap-5 mb-5">
+        <%= link_to "ENROLL TODAY", enroll_path, target: "blank", data: { turbo: false }, class: "px-8 py-3 m-2 text-lg font-semibold rounded bg-sky-100 text-gray-900 hover:scale-105 duration-300" %>
+        <%= link_to "CONTACT US", contact_path, data: { turbo: false }, class: "px-8 py-3 m-2 text-lg font-semibold rounded bg-sky-100 text-gray-900 hover:scale-105 duration-300 hidden lg:block" %>
+      </div>
+      <!--<button class="px-8 py-3 m-2 text-lg font-semibold rounded bg-teal-900 text-gray-900">Start Today</button>
+			<button class="px-8 py-3 m-2 text-lg border rounded text-gray-50 border-gray-700">Contact Us</button>-->
+		</div>
+	</div>
+</section>
+
 
 
 <section class="bg-gradient-to-b from-slate-900 to-sky-950 flex flex-col items-center text-white">

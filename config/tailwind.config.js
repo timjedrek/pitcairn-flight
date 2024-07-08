@@ -147,7 +147,7 @@ module.exports = {
       },
       backgroundImage: {
         homeland: "url('pitcairn-flight-bg-cessna.webp')",
-        home: "url('pitcairn-2-planes.webp')",
+        home: "url('pitcairn-heritage-field-fly-in.webp')",
         "pilot-in-cessna": "url('pitcairn-flight-bg-pilot-in-cessna.webp')",
         "df-cessna": "url('pitcairn-flight-discovery-flight-bg.webp')",
         "cessna-hangar":
@@ -163,6 +163,9 @@ module.exports = {
         "cessna-sunset": "url('cessna_sunset_dark.webp')",
         aerial: "url('aerial.webp')",
         hangarbg: "url('hangarbg.webp')",
+        "why-pitcairn": "url('ArtNancyDavidBarryEvaKatia&Marisa.webp')",
+        instrument:
+          "url('dark-clouds-pitcairn-flight-academy-instrument-rating.webp')",
         mountain: "url('mountain_backdrop.webp')",
         "discovery-flight": "url('discovery-flight-bg.webp')",
         "airline-cockpit": "url('airline_cockpit.webp')",

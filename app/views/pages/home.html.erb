@@ -1,7 +1,8 @@
 <%= render "shared/header"%>
 
-<header class="flex flex-col justify-center w-full bg-home h-screen-3/4 lg:h-screen-4/5 bg-bottom bg-cover px-10 -mt-16 lg:-mt-12">
-  <div class="flex flex-col items-center justify-center">
+<header class="flex relative flex-col justify-center w-full bg-home h-screen-3/4 lg:h-screen-4/5 bg-center bg-fixed bg-cover px-10 -mt-16 lg:-mt-12 overflow-hidden">
+  <div class="absolute bg-gray-900/30 w-full h-full inset-0 -z-0"></div>
+  <div class="flex flex-col items-center justify-center z-10">
     <h1 class="lg:text-6xl text-3xl font-header font-semibold text-center text-white">PILOT TRAINING IN POTTSTOWN HERITAGE FIELD</h1>
     <h2 class="lg:text-3xl text-xl italic font-semibold py-5 text-center text-white lg:block hidden">Your Flight School by Northwest Philadelphia and Reading</h2>
     <h2 class="text-lg italic font-semibold py-5 font-sans text-center text-white lg:hidden">Flight school in the NW Philly & Reading Area</h2>
@@ -21,7 +22,7 @@
     <%= link_to pilot_training_path, data: { turbo: false } do%>
       <div class="flex flex-col items-center">
         <div class="w-72 h-72 overflow-hidden">
-          <%= image_tag "pitcairn-philly-airport-from-sky.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "Philadelphia Airport from above.  Photo by formulanone Flickr"%>
+          <%= image_tag "pitcairn-flight-cfi-fly-with-student.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "CFI at Pitcairn Flight Academy with Student"%>
         </div>
         <div class="font-header uppercase mt-5 text-2xl">
           How to start flying
@@ -31,7 +32,7 @@
     <%= link_to private_pilot_path, data: { turbo: false } do%>
       <div class="flex flex-col items-center">
         <div class="w-72 h-72 overflow-hidden">
-          <%= image_tag "pitcairn-flight-cfi-fly-with-student.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "CFI at Pitcairn Flight Academy with Student"%>
+          <%= image_tag "student-passes-private-pilot-checkride-at-pitcairn-aviation.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "student passes private pilot checkride at pitcairn aviation"%>
         </div>
         <div class="font-header uppercase mt-5 text-2xl">
           Private Pilot
@@ -41,7 +42,7 @@
     <%= link_to rentals_path, data: { turbo: false } do%>
       <div class="flex flex-col items-center">
         <div class="w-72 h-72 overflow-hidden">
-          <%= image_tag "pitcairn-flight-two-cessnas-on-the-ramp.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "Cessna airplanes on the ramp at Pitcairn Flight Academy available for rent"%>
+          <%= image_tag "aircraft-rentals-at-pitcairn-flight-academy.webp", class: "w-full h-full object-cover hover:scale-105 duration-300", alt: "Cessna airplanes on the ramp at Pitcairn Flight Academy available for rent"%>
         </div>
         <div class="font-header uppercase mt-5 text-2xl">
           Aircraft Rentals
@@ -106,7 +107,7 @@
 
   <div class="flex flex-col lg:flex-row-reverse">
     <div class="lg:w-1/2 flex flex-col items-center justify-center">
-      <%= image_tag "pitcairn-flight-penn-airways-building-front.webp", class: "lg:w-5/6 w-full lg:rounded-2xl", alt: "Penn Airways Building Front"%>
+      <%= image_tag "heritage-field-fly-in-event.webp", class: "lg:w-5/6 w-full lg:rounded-2xl", alt: "heritage field fly in event"%>
     </div>
     <div class="lg:w-1/2 flex flex-col items-center">
       <div class="max-w-xl px-5">
@@ -166,7 +167,7 @@
         <%end%>
     </div>
     <div class="lg:w-1/2 flex flex-col items-center justify-center"> 
-      <%= image_tag "pitcairn-two-cessnas.webp", alt: "Two Cessnas at Pitcairn Flight Academy LLC", class: "lg:w-5/6 w-full lg:rounded-2xl"%>
+      <%= image_tag "aircraft-for-rent-at-pitcairn-heritage-field-airport-flight-school.webp", alt: "One Cessna at Pitcairn Flight Academy LLC", class: "lg:w-5/6 w-full lg:rounded-2xl"%>
     </div>
   </div>
 </section>
